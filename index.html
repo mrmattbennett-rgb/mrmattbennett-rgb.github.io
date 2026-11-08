@@ -1,0 +1,286 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Premium Yacht Brokerage</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            DEFAULT: '#0A192F',
+                            light: '#112240',
+                            dark: '#020C1B'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#E5C158',
+                            dark: '#AA8C2C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom styles for elements not handled natively by Tailwind utilities */
+        .glass-nav {
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-gold selection:text-white">
+
+    <!-- 1. Fixed Navigation Bar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-2xl font-bold text-white tracking-widest uppercase">
+                        Aura<span class="text-gold">.</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-sm uppercase tracking-wide text-gray-300 hover:text-gold transition-colors">Home</a>
+                    <a href="#about" class="text-sm uppercase tracking-wide text-gray-300 hover:text-gold transition-colors">Service</a>
+                    <a href="#destinations" class="text-sm uppercase tracking-wide text-gray-300 hover:text-gold transition-colors">Destinations</a>
+                    <a href="#contact" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-ocean transition-colors text-sm uppercase tracking-wide">Inquire</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-white hover:text-gold focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Premium Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Luxury Yacht in the Ocean" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-ocean-dark/70 via-ocean-dark/50 to-ocean-dark/90"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <span class="text-gold font-sans tracking-[0.2em] uppercase text-sm mb-6 block">Bespoke Mediterranean Charters</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-6">
+                Curating the <br/><span class="italic text-gold">Extraordinary</span>
+            </h1>
+            <p class="font-sans text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Elevate your escape. We orchestrate unparalleled yachting experiences across the Mediterranean, partnering directly with elite European agents.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#destinations" class="px-8 py-4 bg-gold text-ocean uppercase tracking-widest text-sm font-semibold hover:bg-gold-light transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                    Explore Destinations
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border border-white text-white uppercase tracking-widest text-sm font-semibold hover:bg-white hover:text-ocean transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                    Consult an Advisor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About / Value Prop Grid -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-ocean mb-4">The Aura Standard</h2>
+                <div class="h-1 w-20 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+                <!-- Column 1 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-ocean-light rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <svg class="w-8 h-8 text-white group-hover:text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-ocean mb-4">Seamless Brokerage</h3>
+                    <p class="font-sans text-gray-600 font-light leading-relaxed">
+                        We liaise directly with premier European agents, ensuring absolute discretion and preferential access to the most coveted fleets globally.
+                    </p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-ocean-light rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <svg class="w-8 h-8 text-white group-hover:text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-ocean mb-4">Bespoke Itineraries</h3>
+                    <p class="font-sans text-gray-600 font-light leading-relaxed">
+                        From secluded coves in the Balearics to Michelin-starred dining in Monaco, every hour of your charter is tailored to your exacting preferences.
+                    </p>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-ocean-light rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <svg class="w-8 h-8 text-white group-hover:text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-ocean mb-4">White-Glove Concierge</h3>
+                    <p class="font-sans text-gray-600 font-light leading-relaxed">
+                        Beyond the yacht, we handle private aviation, onshore experiences, and VIP event access, delivering a truly frictionless luxury journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Destinations -->
+    <section id="destinations" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-sm mb-2 block">Mediterranean Hubs</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-ocean">Featured Horizons</h2>
+                </div>
+                <a href="#contact" class="hidden md:inline-block font-sans text-ocean border-b border-ocean hover:text-gold hover:border-gold transition-colors pb-1 uppercase tracking-wider text-sm">
+                    Plan Your Route
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: French Riviera -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="French Riviera" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-3xl text-white mb-2">French Riviera</h3>
+                            <p class="text-gray-300 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                Monaco • Cannes • St. Tropez
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Italy -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f40af5aa34fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amalfi Coast, Italy" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-3xl text-white mb-2">Amalfi Coast</h3>
+                            <p class="text-gray-300 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                Capri • Positano • Sicily
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Spain -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1539037116277-4db20f01b8e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Balearic Islands, Spain" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-3xl text-white mb-2">Balearic Islands</h3>
+                            <p class="text-gray-300 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                Ibiza • Mallorca • Menorca
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center md:hidden">
+                <a href="#contact" class="inline-block font-sans text-ocean border-b border-ocean uppercase tracking-wider text-sm pb-1">
+                    Plan Your Route
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Clean Contact/Inquiry Form -->
+    <section id="contact" class="py-24 bg-ocean text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-sm mb-4 block">Begin Your Journey</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mb-6">Chart Your Course.</h2>
+                    <p class="font-sans text-gray-300 font-light mb-10 leading-relaxed">
+                        Allow our brokerage experts to curate a selection of yachts perfectly aligned with your desires. Contact us to begin designing your Mediterranean escape.
+                    </p>
+                    <div class="space-y-4 font-sans font-light text-gray-300">
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            +1 (800) 555-AURA
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            charter@aurayachts.com
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Form -->
+                <div class="bg-ocean-light p-8 md:p-10 shadow-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-xs font-sans tracking-widest uppercase text-gray-400 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-gold transition-colors font-light placeholder-gray-500" placeholder="Mr. James Bond">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-sans tracking-widest uppercase text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-gold transition-colors font-light placeholder-gray-500" placeholder="james@example.com">
+                        </div>
+                        <div>
+                            <label for="details" class="block text-xs font-sans tracking-widest uppercase text-gray-400 mb-2">Trip Details (Dates, Destination, Guests)</label>
+                            <textarea id="details" rows="4" class="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-gold transition-colors font-light placeholder-gray-500 resize-none" placeholder="We are looking for a 7-day charter in the Amalfi Coast for 8 guests..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-gold text-ocean uppercase tracking-widest text-sm font-semibold py-4 hover:bg-white hover:text-ocean transition-colors mt-4">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-ocean-dark py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="font-serif text-2xl font-bold text-white tracking-widest uppercase">
+                    Aura<span class="text-gold">.</span>
+                </span>
+            </div>
+            <p class="font-sans text-gray-500 text-sm font-light text-center md:text-left">
+                &copy; 2026 Aura Premium Yacht Brokerage. All rights reserved.
+            </p>
+            <div class="flex space-x-6 mt-6 md:mt-0">
+                <a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+```
