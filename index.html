@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Head to the Med | Bespoke Mediterranean Yacht Charters & AI Concierge</title>
+    <title>Head to the Med | Endless Horizon</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,18 +20,12 @@
                         ocean: {
                             DEFAULT: '#0A192F',
                             light: '#112240',
-                            lighter: '#1D3557',
                             dark: '#020C1B'
                         },
                         gold: {
                             DEFAULT: '#D4AF37',
                             light: '#E5C158',
-                            pale: '#F7EFD2',
                             dark: '#AA8C2C'
-                        },
-                        sand: {
-                            DEFAULT: '#FAF8F5',
-                            dark: '#F0ECE1'
                         }
                     },
                     fontFamily: {
@@ -44,103 +38,44 @@
     </script>
     
     <style>
+        /* Custom styles for elements not handled natively by Tailwind utilities */
         .glass-nav {
-            background: rgba(10, 25, 47, 0.92);
-            backdrop-filter: blur(14px);
-        }
-        .glass-panel {
-            background: rgba(17, 34, 64, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-        }
-        .glass-card-light {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(10, 25, 47, 0.95);
             backdrop-filter: blur(10px);
-        }
-        /* Custom scrollbar for chat and modals */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #020C1B;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1D3557;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
-        @keyframes kenburns {
-            0% { transform: scale(1) translate(0, 0); }
-            50% { transform: scale(1.12) translate(-1.5%, -1%); }
-            100% { transform: scale(1.04) translate(1%, 0.5%); }
-        }
-        .animate-kenburns {
-            animation: kenburns 18s ease-in-out infinite alternate;
-        }
-        @keyframes pulse-gold {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
-            50% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
-        }
-        .pulse-gold {
-            animation: pulse-gold 2.5s infinite;
-        }
-        .matched-glow {
-            box-shadow: 0 10px 35px -5px rgba(212, 175, 55, 0.35);
-            border-color: #D4AF37 !important;
-        }
-        .film-grain {
-            background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 0);
-            background-size: 24px 24px;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-sand antialiased selection:bg-gold selection:text-ocean">
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-gold selection:text-white">
 
     <!-- 1. Fixed Navigation Bar -->
-    <nav class="fixed w-full z-40 glass-nav border-b border-white/10 transition-all duration-300">
+    <nav class="fixed w-full z-50 glass-nav border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 md:h-24">
+            <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <a href="#hero" class="flex items-center gap-3 group">
-                        <img src="Logo.jpg" alt="Head to the Med Logo" class="h-12 md:h-14 w-auto rounded border border-gold/30 shadow-md object-contain bg-ocean" onerror="this.style.display='none'">
-                        <div class="flex flex-col">
-                            <span class="font-serif text-lg md:text-2xl font-bold text-white tracking-widest uppercase leading-none">
-                                Head to the Med
-                            </span>
-                            <div class="flex items-center mt-1.5">
-                                <div class="h-px w-6 bg-gold transition-all group-hover:w-12"></div>
-                                <span class="text-gold font-sans text-[0.55rem] tracking-[0.3em] uppercase ml-2">Endless Horizon</span>
-                            </div>
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex flex-col group">
+                        <span class="font-serif text-xl md:text-2xl font-bold text-white tracking-widest uppercase leading-none">
+                            Head to the Med
+                        </span>
+                        <div class="flex items-center mt-1.5">
+                            <div class="h-px w-6 bg-gold transition-all group-hover:w-12"></div>
+                            <span class="text-gold font-sans text-[0.55rem] tracking-[0.3em] uppercase ml-2">Endless Horizon</span>
                         </div>
                     </a>
                 </div>
-
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-7">
-                    <a href="#dream-studio" class="text-xs uppercase tracking-widest text-gold font-medium hover:text-white transition-colors flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
-                        AI Dream Studio
-                    </a>
-                    <a href="#fleet" class="text-xs uppercase tracking-widest text-gray-300 hover:text-gold transition-colors">The Fleet</a>
-                    <a href="#destinations" class="text-xs uppercase tracking-widest text-gray-300 hover:text-gold transition-colors">Destinations</a>
-                    <a href="#culinary" class="text-xs uppercase tracking-widest text-gray-300 hover:text-gold transition-colors">Culinary & Ashore</a>
-                    <a href="#ai-cinema" class="text-xs uppercase tracking-widest text-gray-300 hover:text-gold transition-colors">AI Charter Film</a>
-                    <button onclick="scrollToSection('booking-section')" class="px-5 py-2.5 bg-gold text-ocean font-semibold hover:bg-gold-light transition-all text-xs uppercase tracking-widest rounded-sm shadow-lg">
-                        Book Consultation
-                    </button>
-                    <button onclick="openApiModal()" title="Configure Live Gemini AI Key" class="text-gray-400 hover:text-gold transition-colors p-2 rounded-full border border-white/10 hover:border-gold/40">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </button>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-sm uppercase tracking-wide text-gray-300 hover:text-gold transition-colors">Home</a>
+                    <a href="#about" class="text-sm uppercase tracking-wide text-gray-300 hover:text-gold transition-colors">Service</a>
+                    <a href="#destinations" class="text-sm uppercase tracking-wide text-gray-300 hover:text-gold transition-colors">Destinations</a>
+                    <a href="#contact" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-ocean transition-colors text-sm uppercase tracking-wide">Inquire</a>
                 </div>
-
                 <!-- Mobile Menu Button -->
-                <div class="lg:hidden flex items-center gap-3">
-                    <button onclick="scrollToSection('dream-studio')" class="px-3 py-1.5 bg-gold text-ocean text-xs font-semibold uppercase tracking-wider rounded-sm">
-                        AI Concierge
+                <div class="md:hidden flex items-center">
+                    <button class="text-white hover:text-gold focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -148,1836 +83,212 @@
     </nav>
 
     <!-- 2. Premium Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <section id="hero" class="relative h-screen flex items-center justify-center pt-20">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=85" alt="Superyacht anchored in the Mediterranean" class="w-full h-full object-cover animate-kenburns" />
-            <div class="absolute inset-0 bg-gradient-to-b from-ocean-dark/80 via-ocean-dark/55 to-ocean-dark/95"></div>
+            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Luxury Yacht in the Ocean" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-ocean-dark/70 via-ocean-dark/50 to-ocean-dark/90"></div>
         </div>
         
         <!-- Hero Content -->
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-8">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-gold/40 backdrop-blur-md mb-6">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-medium">Bespoke Mediterranean Yacht Charters</span>
-            </div>
-            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6">
-                Why Book a Hotel When You Can <br/><span class="italic text-gold">Own the Horizon?</span>
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <span class="text-gold font-sans tracking-[0.2em] uppercase text-sm mb-6 block">Bespoke Mediterranean Charters</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-6">
+                Discover an <br/><span class="italic text-gold">Endless Horizon</span>
             </h1>
-            <p class="font-sans text-gray-200 text-base sm:text-lg md:text-xl font-light max-w-3xl mx-auto mb-10 leading-relaxed">
-                Wake up in a secluded Capri cove, dine on Michelin-level cuisine prepared by your private chef, and cruise into St. Tropez at sunset—without ever packing a suitcase twice. Tell our AI Charter Concierge your desires, and watch your dream voyage come to life.
+            <p class="font-sans text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Elevate your escape. We orchestrate unparalleled yachting experiences across the Mediterranean, unlocking boundries and expanding your horizon with elite European fleets.
             </p>
-
-            <!-- Quick Dream Starter Pills -->
-            <div class="max-w-3xl mx-auto mb-10">
-                <p class="text-xs uppercase tracking-[0.25em] text-gold/90 mb-3">Click a desire to begin configuring your voyage:</p>
-                <div class="flex flex-wrap justify-center gap-2.5">
-                    <button onclick="triggerDreamPreset('amalfi_romance')" class="px-4 py-2.5 rounded-full bg-ocean-light/80 hover:bg-gold hover:text-ocean text-white border border-gold/30 text-xs sm:text-sm transition-all duration-300 backdrop-blur-sm">
-                        🥂 Sunset Champagne & Capri Grottos
-                    </button>
-                    <button onclick="triggerDreamPreset('riviera_glamour')" class="px-4 py-2.5 rounded-full bg-ocean-light/80 hover:bg-gold hover:text-ocean text-white border border-gold/30 text-xs sm:text-sm transition-all duration-300 backdrop-blur-sm">
-                        🛥️ Monaco Superyacht & Beach Club Glamour
-                    </button>
-                    <button onclick="triggerDreamPreset('greek_odyssey')" class="px-4 py-2.5 rounded-full bg-ocean-light/80 hover:bg-gold hover:text-ocean text-white border border-gold/30 text-xs sm:text-sm transition-all duration-300 backdrop-blur-sm">
-                        🏛️ Hidden Greek Islands & Private Chef Dining
-                    </button>
-                    <button onclick="triggerDreamPreset('family_adventure')" class="px-4 py-2.5 rounded-full bg-ocean-light/80 hover:bg-gold hover:text-ocean text-white border border-gold/30 text-xs sm:text-sm transition-all duration-300 backdrop-blur-sm">
-                        🌊 Family Seabob Adventure in Croatia
-                    </button>
-                </div>
-            </div>
-
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <button onclick="scrollToSection('dream-studio')" class="px-8 py-4 bg-gold text-ocean uppercase tracking-widest text-xs sm:text-sm font-semibold hover:bg-gold-light transition-all transform hover:-translate-y-0.5 w-full sm:w-auto text-center shadow-xl flex items-center justify-center gap-2">
-                    <span>Design My Dream Charter</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-                </button>
-                <button onclick="scrollToSection('ai-cinema')" class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/40 text-white uppercase tracking-widest text-xs sm:text-sm font-semibold hover:bg-white hover:text-ocean transition-all transform hover:-translate-y-0.5 w-full sm:w-auto text-center flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/></svg>
-                    <span>Generate AI Charter Film</span>
-                </button>
+                <a href="#destinations" class="px-8 py-4 bg-gold text-ocean uppercase tracking-widest text-sm font-semibold hover:bg-gold-light transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                    Explore Destinations
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border border-white text-white uppercase tracking-widest text-sm font-semibold hover:bg-white hover:text-ocean transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                    Consult an Advisor
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 3. Interactive AI Dream Studio & Live Charter Configurator -->
-    <section id="dream-studio" class="py-20 bg-ocean text-white relative border-t border-gold/20">
+    <!-- 3. About / Value Prop Grid -->
+    <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-gold font-sans tracking-[0.25em] uppercase text-xs font-semibold block mb-2">Interactive AI Concierge & Dream Extractor</span>
-                <h2 class="font-serif text-3xl sm:text-5xl text-white mb-4">Tell Us Your Desires. Watch Your Charter Materialize.</h2>
-                <p class="text-gray-300 font-light text-sm sm:text-base">
-                    Converse with <span class="text-gold font-medium">Aria</span>, our Mediterranean Charter Specialist. As you share who you're traveling with, the atmosphere you crave, and your culinary tastes, she dynamically tailors the yachts, destinations, menus, and AI preview film below.
-                </p>
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-ocean mb-4">The Head to the Med Standard</h2>
+                <div class="h-1 w-20 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+                <!-- Column 1 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-ocean-light rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <svg class="w-8 h-8 text-white group-hover:text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-ocean mb-4">Seamless Brokerage</h3>
+                    <p class="font-sans text-gray-600 font-light leading-relaxed">
+                        We liaise directly with premier European agents, ensuring absolute discretion and preferential access to the most coveted fleets globally.
+                    </p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-ocean-light rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <svg class="w-8 h-8 text-white group-hover:text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-ocean mb-4">Bespoke Itineraries</h3>
+                    <p class="font-sans text-gray-600 font-light leading-relaxed">
+                        From secluded coves in the Balearics to Michelin-starred dining in Monaco, every hour of your charter is tailored to your exacting preferences.
+                    </p>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto bg-ocean-light rounded-full flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <svg class="w-8 h-8 text-white group-hover:text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-ocean mb-4">White-Glove Concierge</h3>
+                    <p class="font-sans text-gray-600 font-light leading-relaxed">
+                        Beyond the yacht, we handle private aviation, onshore experiences, and VIP event access, delivering a truly frictionless luxury journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Destinations -->
+    <section id="destinations" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-sm mb-2 block">Mediterranean Hubs</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-ocean">Featured Horizons</h2>
+                </div>
+                <a href="#contact" class="hidden md:inline-block font-sans text-ocean border-b border-ocean hover:text-gold hover:border-gold transition-colors pb-1 uppercase tracking-wider text-sm">
+                    Plan Your Route
+                </a>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <!-- Left Column: Conversational AI Interface (7 Cols) -->
-                <div class="lg:col-span-7 glass-panel rounded-xl overflow-hidden shadow-2xl flex flex-col h-[640px]">
-                    <!-- Chat Header -->
-                    <div class="bg-ocean-dark/90 px-6 py-4 border-b border-white/10 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="relative">
-                                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-ocean font-serif font-bold text-lg shadow">
-                                    A
-                                </div>
-                                <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-ocean-dark rounded-full"></span>
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h3 class="font-serif text-lg text-white leading-none">Aria — Senior Charter Concierge</h3>
-                                    <span id="aiModeBadge" class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-gold/20 text-gold border border-gold/30">Smart Concierge</span>
-                                </div>
-                                <p class="text-xs text-gray-400 mt-1">Extracting your Mediterranean dream profile & curating bespoke materials</p>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: French Riviera -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="French Riviera" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-3xl text-white mb-2">French Riviera</h3>
+                            <p class="text-gray-300 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                Monaco • Cannes • St. Tropez
+                            </p>
                         </div>
-                        <button onclick="resetDreamProfile()" class="text-xs text-gray-400 hover:text-gold uppercase tracking-wider transition-colors flex items-center gap-1" title="Start Fresh">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-                            <span>Reset</span>
-                        </button>
                     </div>
+                </div>
 
-                    <!-- Chat Messages Feed -->
-                    <div id="chatMessages" class="flex-1 p-6 overflow-y-auto space-y-5 bg-gradient-to-b from-ocean-dark/40 to-ocean-light/40">
-                        <!-- Populated dynamically by JS -->
+                <!-- Card 2: Italy -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f40af5aa34fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amalfi Coast, Italy" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-3xl text-white mb-2">Amalfi Coast</h3>
+                            <p class="text-gray-300 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                Capri • Positano • Sicily
+                            </p>
+                        </div>
                     </div>
+                </div>
 
-                    <!-- Suggested Response Chips -->
-                    <div id="chatQuickReplies" class="px-6 py-3 bg-ocean-dark/70 border-t border-white/5 flex flex-wrap gap-2">
-                        <!-- Populated dynamically by JS -->
+                <!-- Card 3: Spain -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1539037116277-4db20f01b8e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Balearic Islands, Spain" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-3xl text-white mb-2">Balearic Islands</h3>
+                            <p class="text-gray-300 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                Ibiza • Mallorca • Menorca
+                            </p>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center md:hidden">
+                <a href="#contact" class="inline-block font-sans text-ocean border-b border-ocean uppercase tracking-wider text-sm pb-1">
+                    Plan Your Route
+                </a>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Chat Input Box -->
-                    <form id="chatForm" onsubmit="handleUserChatSubmit(event)" class="p-4 bg-ocean-dark border-t border-white/10 flex gap-3 items-center">
-                        <input 
-                            type="text" 
-                            id="chatInput" 
-                            placeholder="Describe your dream trip (e.g., '8 guests in Italy with Michelin dining & water toys' or 'Book a call')..." 
-                            class="flex-1 bg-ocean-light/90 text-white placeholder-gray-400 text-sm px-4 py-3.5 rounded-lg border border-white/15 focus:outline-none focus:border-gold transition-colors"
-                        >
-                        <button type="submit" class="px-6 py-3.5 bg-gold hover:bg-gold-light text-ocean font-semibold text-xs uppercase tracking-widest rounded-lg transition-all flex items-center gap-2 shrink-0 shadow-lg">
-                            <span>Send</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+    <!-- 5. Clean Contact/Inquiry Form -->
+    <section id="contact" class="py-24 bg-ocean text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-sm mb-4 block">Begin Your Journey</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mb-6">Chart Your Course.</h2>
+                    <p class="font-sans text-gray-300 font-light mb-10 leading-relaxed">
+                        Allow our brokerage experts to curate a selection of yachts perfectly aligned with your desires. Contact us to begin designing your Mediterranean escape.
+                    </p>
+                    <div class="space-y-4 font-sans font-light text-gray-300">
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            +1 (800) 555-MED1
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            charter@headtothemed.com
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Form -->
+                <div class="bg-ocean-light p-8 md:p-10 shadow-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-xs font-sans tracking-widest uppercase text-gray-400 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-gold transition-colors font-light placeholder-gray-500" placeholder="Mr. James Bond">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-sans tracking-widest uppercase text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-gold transition-colors font-light placeholder-gray-500" placeholder="james@example.com">
+                        </div>
+                        <div>
+                            <label for="details" class="block text-xs font-sans tracking-widest uppercase text-gray-400 mb-2">Trip Details (Dates, Destination, Guests)</label>
+                            <textarea id="details" rows="4" class="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-gold transition-colors font-light placeholder-gray-500 resize-none" placeholder="We are looking for a 7-day charter in the Amalfi Coast for 8 guests..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-gold text-ocean uppercase tracking-widest text-sm font-semibold py-4 hover:bg-white hover:text-ocean transition-colors mt-4">
+                            Submit Inquiry
                         </button>
                     </form>
                 </div>
-
-                <!-- Right Column: Live Extracted Dream Dossier (5 Cols) -->
-                <div class="lg:col-span-5 glass-panel rounded-xl p-6 sm:p-8 shadow-2xl border border-gold/30 flex flex-col justify-between min-h-[640px]">
-                    <div>
-                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
-                            <div>
-                                <span class="text-[11px] uppercase tracking-[0.25em] text-gold block">Live Charter Dossier</span>
-                                <h3 class="font-serif text-2xl text-white mt-0.5">Your Extracted Dream Profile</h3>
-                            </div>
-                            <div class="text-right">
-                                <span id="dossierCompletion" class="text-xs font-semibold px-2.5 py-1 rounded bg-gold text-ocean">25% Tailored</span>
-                            </div>
-                        </div>
-
-                        <!-- Extracted Parameters Grid -->
-                        <div class="grid grid-cols-2 gap-3.5 mb-6">
-                            <div class="bg-ocean-dark/70 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-1">Destination Hub</span>
-                                <p id="profileDestination" class="font-serif text-base text-gold font-medium">Amalfi Coast & Capri</p>
-                            </div>
-                            <div class="bg-ocean-dark/70 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-1">Charter Vibe & Pace</span>
-                                <p id="profileVibe" class="font-serif text-base text-white">Romantic & Iconic Glamour</p>
-                            </div>
-                            <div class="bg-ocean-dark/70 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-1">Party & Guests</span>
-                                <p id="profileGuests" class="font-serif text-base text-white">Up to 8 Guests (4 Cabins)</p>
-                            </div>
-                            <div class="bg-ocean-dark/70 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-1">Culinary Direction</span>
-                                <p id="profileCulinary" class="font-serif text-base text-white">Michelin Coastal & Crudo</p>
-                            </div>
-                        </div>
-
-                        <!-- Top Matched Yacht Preview Card -->
-                        <div class="bg-ocean-dark/90 rounded-lg overflow-hidden border border-gold/40 mb-6">
-                            <div class="relative h-40">
-                                <img id="dossierYachtImg" src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Matched Yacht" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark via-ocean-dark/30 to-transparent"></div>
-                                <span class="absolute top-3 left-3 bg-gold text-ocean text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">
-                                    #1 AI Yacht Match
-                                </span>
-                                <span id="dossierYachtPrice" class="absolute top-3 right-3 bg-ocean-dark/90 text-gold border border-gold/40 text-xs font-semibold px-2.5 py-1 rounded">
-                                    €115,000 / wk
-                                </span>
-                                <div class="absolute bottom-3 left-4 right-4">
-                                    <h4 id="dossierYachtName" class="font-serif text-xl text-white">M/Y Aurelia Sovereign (42m)</h4>
-                                    <p id="dossierYachtSpecs" class="text-xs text-gray-300">5 En-Suite Staterooms • 10 Guests • 8 Crew • Beach Club & Jacuzzi</p>
-                                </div>
-                            </div>
-                            <div class="p-4 flex items-center justify-between bg-ocean-dark">
-                                <span id="dossierExperienceTag" class="text-xs text-gray-300 truncate pr-2">✨ Includes Private Grottos & Cliffside Ravello Dining</span>
-                                <button onclick="openYachtModal(currentState.matchedYachtId)" class="text-xs text-gold hover:underline uppercase tracking-wider shrink-0 font-medium">
-                                    Inspect Yacht →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Action Buttons in Dossier -->
-                    <div class="space-y-3 pt-2 border-t border-white/10">
-                        <button onclick="generateAIVideoAndScroll()" class="w-full py-3.5 px-4 bg-gradient-to-r from-gold via-gold-light to-gold text-ocean font-bold text-xs uppercase tracking-widest rounded-lg shadow-lg hover:brightness-105 transition-all flex items-center justify-center gap-2">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/></svg>
-                            <span>Synthesize AI Video of This Selection</span>
-                        </button>
-                        <div class="grid grid-cols-2 gap-3">
-                            <button onclick="startChatAppointmentFlow()" class="py-2.5 px-3 bg-ocean-light hover:bg-ocean-lighter text-white border border-gold/30 text-xs uppercase tracking-wider rounded-lg transition-colors">
-                                💬 Book Call in Chat
-                            </button>
-                            <button onclick="scrollToSection('booking-section')" class="py-2.5 px-3 bg-ocean-light hover:bg-ocean-lighter text-gold border border-gold/30 text-xs uppercase tracking-wider rounded-lg transition-colors">
-                                📅 Open Calendar
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Why a Mediterranean Yacht Charter Beats Every Other Luxury Vacation -->
-    <section class="py-16 bg-ocean-dark text-white border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0 mt-1 font-serif font-bold">01</div>
-                    <div>
-                        <h4 class="font-serif text-lg text-white mb-1">Zero Crowds, Total Privacy</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">While five-star hotel guests battle for beach loungers, your private swim platform opens directly onto crystalline turquoise bays accessible only by sea.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0 mt-1 font-serif font-bold">02</div>
-                    <div>
-                        <h4 class="font-serif text-lg text-white mb-1">Unpack Once, Wake Up Anywhere</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">Fall asleep off Positano and wake up anchored beneath the Faraglioni rocks of Capri. Your floating private villa travels with you.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0 mt-1 font-serif font-bold">03</div>
-                    <div>
-                        <h4 class="font-serif text-lg text-white mb-1">Your Own Michelin-Trained Chef</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">No rigid restaurant reservations required. Every menu is custom-designed around your preferences and sourced fresh from morning Mediterranean markets.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0 mt-1 font-serif font-bold">04</div>
-                    <div>
-                        <h4 class="font-serif text-lg text-white mb-1">Dedicated 1:1 Crew-to-Guest Ratio</h4>
-                        <p class="text-xs text-gray-400 leading-relaxed">From your Captain who knows every secret anchorage to water-sports instructors and stewardesses, every whim is anticipated seamlessly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. AI Charter Film Synthesizer (Quick AI Generated Video Preview) -->
-    <section id="ai-cinema" class="py-24 bg-gradient-to-b from-ocean-dark via-ocean to-ocean-dark text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-gold/15 border border-gold/30 text-gold text-xs uppercase tracking-widest mb-3">
-                        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                        AI Vision Synthesizer
-                    </div>
-                    <h2 class="font-serif text-3xl sm:text-5xl text-white">Your Bespoke AI Charter Film</h2>
-                    <p class="text-gray-300 font-light text-sm sm:text-base mt-2 max-w-2xl">
-                        Watch a personalized multi-scene cinematic preview dynamically assembled from your selected yacht, Mediterranean destination, onshore excursion, and culinary style.
-                    </p>
-                </div>
-                <div class="mt-6 md:mt-0 flex items-center gap-3">
-                    <button onclick="regenerateAIVideo()" class="px-6 py-3 bg-gold text-ocean font-semibold text-xs uppercase tracking-widest rounded hover:bg-gold-light transition-all shadow-lg flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span>Render New AI Preview</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Cinema Player Stage -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-8">
-                    <div class="relative rounded-2xl overflow-hidden border-2 border-gold/40 shadow-2xl bg-black aspect-video group">
-                        <!-- AI Synthesis Loading Overlay -->
-                        <div id="videoSynthesizingOverlay" class="hidden absolute inset-0 z-30 bg-ocean-dark/95 backdrop-blur-md flex flex-col items-center justify-center p-8 text-center">
-                            <div class="w-16 h-16 border-4 border-gold/30 border-t-gold rounded-full animate-spin mb-6"></div>
-                            <span class="text-xs uppercase tracking-[0.3em] text-gold mb-2">AI Video Engine Rendering</span>
-                            <h4 id="videoRenderStepTitle" class="font-serif text-2xl text-white mb-3">Composing Scene 1: Morning Anchorage...</h4>
-                            <div class="w-full max-w-md bg-white/10 h-2 rounded-full overflow-hidden mb-3">
-                                <div id="videoRenderProgressBar" class="bg-gold h-full w-1/4 transition-all duration-300"></div>
-                            </div>
-                            <p id="videoRenderPromptText" class="text-xs text-gray-400 italic max-w-lg"></p>
-                        </div>
-
-                        <!-- Active Video / Dynamic Motion Canvas -->
-                        <video id="aiCinemaVideo" class="w-full h-full object-cover opacity-90 transition-opacity duration-700" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80">
-                            <source id="aiCinemaVideoSource" src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-yacht-sailing-in-the-sea-41444-large.mp4" type="video/mp4">
-                        </video>
-
-                        <!-- Fallback / Dynamic Scene Ken Burns Layer (blended for rich bespoke multi-scene storytelling) -->
-                        <img id="aiCinemaSceneImage" src="https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=85" alt="Scene Visual" class="absolute inset-0 w-full h-full object-cover animate-kenburns mix-blend-overlay opacity-55 pointer-events-none">
-
-                        <!-- Cinematic Letterbox & Caption Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/50 pointer-events-none"></div>
-
-                        <!-- Top HUD inside Video -->
-                        <div class="absolute top-4 left-4 right-4 flex justify-between items-center z-20 pointer-events-none">
-                            <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/15">
-                                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                                <span id="videoHudBadge" class="text-[11px] uppercase tracking-widest text-white font-medium">AI Dream Reel • Scene 1 of 4</span>
-                            </div>
-                            <div class="bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-gold/30 text-[11px] text-gold">
-                                <span id="videoHudSpecs">4K HDR • Tailored to Your Chat</span>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Storyboard Narration & Controls -->
-                        <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 z-20">
-                            <div class="mb-4">
-                                <span id="videoSceneTimecode" class="text-xs uppercase tracking-[0.25em] text-gold font-semibold block mb-1">09:00 AM — MORNING ARRIVAL</span>
-                                <h3 id="videoSceneHeading" class="font-serif text-xl sm:text-3xl text-white mb-2">Emerging into the Emerald Waters of Capri</h3>
-                                <p id="videoSceneNarration" class="text-xs sm:text-sm text-gray-200 font-light max-w-2xl leading-relaxed">
-                                    Your 42m superyacht M/Y Aurelia Sovereign drops anchor beneath the towering limestone cliffs while your stewardess serves chilled Bellinis on the aft sundeck.
-                                </p>
-                            </div>
-
-                            <!-- Scene Timeline Progress Bars -->
-                            <div class="grid grid-cols-4 gap-2 pt-2">
-                                <button onclick="selectVideoScene(0)" class="text-left group focus:outline-none">
-                                    <div class="h-1.5 rounded-full bg-white/25 overflow-hidden mb-1">
-                                        <div id="sceneBar0" class="h-full bg-gold w-full transition-all"></div>
-                                    </div>
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-300 group-hover:text-gold">01. Yacht & Wake</span>
-                                </button>
-                                <button onclick="selectVideoScene(1)" class="text-left group focus:outline-none">
-                                    <div class="h-1.5 rounded-full bg-white/25 overflow-hidden mb-1">
-                                        <div id="sceneBar1" class="h-full bg-gold w-0 transition-all"></div>
-                                    </div>
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-300 group-hover:text-gold">02. Secret Cove</span>
-                                </button>
-                                <button onclick="selectVideoScene(2)" class="text-left group focus:outline-none">
-                                    <div class="h-1.5 rounded-full bg-white/25 overflow-hidden mb-1">
-                                        <div id="sceneBar2" class="h-full bg-gold w-0 transition-all"></div>
-                                    </div>
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-300 group-hover:text-gold">03. Ashore & Toys</span>
-                                </button>
-                                <button onclick="selectVideoScene(3)" class="text-left group focus:outline-none">
-                                    <div class="h-1.5 rounded-full bg-white/25 overflow-hidden mb-1">
-                                        <div id="sceneBar3" class="h-full bg-gold w-0 transition-all"></div>
-                                    </div>
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-300 group-hover:text-gold">04. Chef's Table</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side: Storyboard Controls & Prompt Customizer (4 Cols) -->
-                <div class="lg:col-span-4 glass-panel rounded-2xl p-6 border border-gold/30 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs uppercase tracking-[0.2em] text-gold block mb-1">AI Prompt & Scene Director</span>
-                        <h3 class="font-serif text-2xl text-white mb-4">Customize Your Preview</h3>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-5">
-                            Every change you make in the chat or selector below updates the 4-act storyboard and synthesizes a new visual reel showing what your week onboard looks and feels like.
-                        </p>
-
-                        <div class="space-y-4 mb-6">
-                            <div>
-                                <label class="block text-[11px] uppercase tracking-wider text-gray-400 mb-1.5">Destination Backdrop</label>
-                                <select id="videoSelectDest" onchange="handleManualVideoConfigChange()" class="w-full bg-ocean-dark border border-white/15 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none">
-                                    <option value="amalfi">Amalfi Coast, Positano & Capri</option>
-                                    <option value="riviera">French Riviera (Monaco & St. Tropez)</option>
-                                    <option value="cyclades">Greek Islands (Mykonos & Santorini)</option>
-                                    <option value="balearics">Balearic Islands (Ibiza, Formentera & Mallorca)</option>
-                                    <option value="croatia">Croatian Dalmatian Coast (Hvar & Dubrovnik)</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-[11px] uppercase tracking-wider text-gray-400 mb-1.5">Featured Vessel Class</label>
-                                <select id="videoSelectYacht" onchange="handleManualVideoConfigChange()" class="w-full bg-ocean-dark border border-white/15 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none">
-                                    <option value="aurelia">M/Y Aurelia Sovereign — 42m Motor Yacht (€115k/wk)</option>
-                                    <option value="olympus">M/Y Titan of Monaco — 62m Superyacht (€290k/wk)</option>
-                                    <option value="solaris">S/Y Aeolian Solaris — 34m Luxury Catamaran (€68k/wk)</option>
-                                    <option value="mistral">M/Y Riva Bellissima — 28m Open Sport Yacht (€52k/wk)</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-[11px] uppercase tracking-wider text-gray-400 mb-1.5">Signature Highlight Moment</label>
-                                <select id="videoSelectMoment" onchange="handleManualVideoConfigChange()" class="w-full bg-ocean-dark border border-white/15 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-gold focus:outline-none">
-                                    <option value="michelin">Candlelit Michelin Tasting Menu on the Aft Deck</option>
-                                    <option value="toys">Jet-Skis, Seabobs & Foil-Boarding in Turquoise Coves</option>
-                                    <option value="beachclub">VIP Tender Arrival at Club 55 / Scorpios Sunset</option>
-                                    <option value="vineyard">Helicopter & Private Coastal Vineyard Truffle Lunch</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="bg-ocean-dark/80 rounded-lg p-3.5 border border-white/10 mb-6">
-                            <span class="text-[10px] uppercase tracking-widest text-gold block mb-1">Active AI Scene Prompt</span>
-                            <p id="activePromptPreview" class="text-xs text-gray-300 italic leading-relaxed">
-                                "Cinematic aerial 4K drone shot of 42m M/Y Aurelia Sovereign anchored off Capri's Faraglioni at golden hour, private chef plating crudo on teak aft deck..."
-                            </p>
-                        </div>
-                    </div>
-
-                    <button onclick="regenerateAIVideo()" class="w-full py-3.5 bg-gold hover:bg-gold-light text-ocean font-bold text-xs uppercase tracking-widest rounded-lg transition-all shadow-lg">
-                        ✨ Synthesize Updated AI Film
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Detailed Yacht Fleet & Transparent Pricing Section -->
-    <section id="fleet" class="py-24 bg-sand">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-                <div>
-                    <span class="text-gold-dark font-sans tracking-[0.25em] uppercase text-xs font-semibold mb-2 block">Curated Mediterranean Fleet</span>
-                    <h2 class="font-serif text-3xl sm:text-5xl text-ocean">Detailed Yacht Specifications & Pricing</h2>
-                    <p class="text-gray-600 text-sm sm:text-base mt-2 max-w-2xl font-light">
-                        Every vessel in our charter portfolio includes a full professional crew, gourmet chef, and water-sports garage. Yachts matching your AI chat preferences are highlighted in gold.
-                    </p>
-                </div>
-                <!-- Fleet Filter Tabs -->
-                <div class="flex flex-wrap gap-2 mt-6 md:mt-0">
-                    <button onclick="filterFleet('all')" id="fleetTab-all" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-ocean text-gold border border-ocean transition-all">All Yachts</button>
-                    <button onclick="filterFleet('superyacht')" id="fleetTab-superyacht" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-white text-ocean border border-gray-300 hover:border-gold transition-all">Superyachts (50m+)</button>
-                    <button onclick="filterFleet('motoryacht')" id="fleetTab-motoryacht" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-white text-ocean border border-gray-300 hover:border-gold transition-all">Motor Yachts</button>
-                    <button onclick="filterFleet('catamaran')" id="fleetTab-catamaran" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-white text-ocean border border-gray-300 hover:border-gold transition-all">Sailing & Catamarans</button>
-                </div>
-            </div>
-
-            <!-- Dynamic Fleet Cards Container -->
-            <div id="fleetGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Populated by JavaScript -->
-            </div>
-
-            <!-- Transparent Charter Pricing & APA Explainer Banner -->
-            <div class="mt-14 bg-ocean rounded-2xl p-8 sm:p-10 text-white shadow-xl border border-gold/30">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-8">
-                        <span class="text-gold text-xs uppercase tracking-[0.2em] block mb-2">Complete Financial Transparency</span>
-                        <h3 class="font-serif text-2xl sm:text-3xl mb-3">How Mediterranean Yacht Charter Pricing Works</h3>
-                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-4">
-                            Under MYBA (Mediterranean Yachting Brokers Association) terms, the base weekly charter rate covers the exclusive hire of the yacht, full crew wages, insurance, and all onboard water toys. Fuel, bespoke food & fine wine provisioning, and marina dockage are managed transparently through your <strong class="text-gold font-medium">APA (Advance Provisioning Allowance — typically 30%)</strong>, with all unused funds refunded to you at disembarkation.
-                        </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                            <div class="bg-ocean-light/80 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-gold font-serif text-lg block">Base Charter Fee</span>
-                                <span class="text-xs text-gray-400">Yacht, Crew, Insurance & Water Toys</span>
-                            </div>
-                            <div class="bg-ocean-light/80 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-gold font-serif text-lg block">+ 30% APA Account</span>
-                                <span class="text-xs text-gray-400">Your custom food, vintage wines, fuel & ports</span>
-                            </div>
-                            <div class="bg-ocean-light/80 p-3.5 rounded-lg border border-white/10">
-                                <span class="text-gold font-serif text-lg block">Cost Per Couple</span>
-                                <span class="text-xs text-gray-400">Often comparable to 5-star suites when split across 4–6 cabins</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 text-center lg:text-right">
-                        <button onclick="askConciergeAbout('Give me a full all-in pricing breakdown for my group size')" class="px-7 py-4 bg-gold text-ocean font-bold text-xs uppercase tracking-widest rounded-lg hover:bg-gold-light transition-all shadow-lg inline-block">
-                            Ask Aria to Calculate Your Quote →
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Mediterranean Destinations & Curated Local Experiences -->
-    <section id="destinations" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-gold-dark font-sans tracking-[0.25em] uppercase text-xs font-semibold block mb-2">Five Iconic Cruising Grounds</span>
-                <h2 class="font-serif text-3xl sm:text-5xl text-ocean mb-4">Mediterranean Destinations & Local Immersions</h2>
-                <p class="text-gray-600 font-light text-sm sm:text-base">
-                    Explore our five signature Mediterranean regions. Select any destination to inspect sample 7-day yacht routes, insider onshore experiences, and best cruising months.
-                </p>
-            </div>
-
-            <!-- Interactive Destination Selector Pills -->
-            <div id="destinationTabs" class="flex flex-wrap justify-center gap-3 mb-12">
-                <!-- Populated by JS -->
-            </div>
-
-            <!-- Active Destination Showcase Spotlight -->
-            <div id="destinationSpotlight" class="bg-sand rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <!-- Populated dynamically by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. Bespoke Culinary & Private Chef Curation -->
-    <section id="culinary" class="py-24 bg-ocean text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-gold font-sans tracking-[0.25em] uppercase text-xs font-semibold block mb-2">Gastronomy at Sea & Ashore</span>
-                <h2 class="font-serif text-3xl sm:text-5xl text-white mb-4">Your Private Michelin-Trained Galley</h2>
-                <p class="text-gray-300 font-light text-sm sm:text-base">
-                    Before you step aboard, you complete a detailed Preference Sheet. Whether you desire line-caught Mediterranean sea bass crudo, rare biodynamic Burgundies, or playful plant-based feasts for the children, your onboard chef curates every meal to perfection.
-                </p>
-            </div>
-
-            <!-- Culinary Cards Grid -->
-            <div id="culinaryGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Appointment Scheduling Hub (AI Chat Contact OR Interactive Calendar) -->
-    <section id="booking-section" class="py-24 bg-sand-dark border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-gold-dark font-sans tracking-[0.25em] uppercase text-xs font-semibold block mb-2">White-Glove Brokerage Advisory</span>
-                <h2 class="font-serif text-3xl sm:text-5xl text-ocean mb-4">Reserve Your Private Charter Consultation</h2>
-                <p class="text-gray-600 font-light text-sm sm:text-base">
-                    Book a 20-minute private video or phone consultation directly on our Senior Broker Calendar below, or let our AI Concierge schedule your appointment conversationally via chat. Both automatically attach your custom Dream Dossier.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                <!-- Left Column: Interactive Visual Calendar Scheduler (7 Cols) -->
-                <div class="lg:col-span-7 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                    <div class="bg-ocean px-6 py-5 text-white flex items-center justify-between">
-                        <div>
-                            <span class="text-[11px] uppercase tracking-widest text-gold block">Direct Calendar Booking</span>
-                            <h3 class="font-serif text-2xl">Select a Date & Time Slot</h3>
-                        </div>
-                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-200">CET / US EST Auto-Sync</span>
-                    </div>
-
-                    <div class="p-6 sm:p-8">
-                        <!-- Step 1: Select Date -->
-                        <div class="mb-6">
-                            <div class="flex items-center justify-between mb-3">
-                                <label class="text-xs font-semibold uppercase tracking-wider text-ocean">1. Choose Consultation Date (November 2026)</label>
-                                <span class="text-xs text-gold-dark font-medium">Senior Charter Director Available</span>
-                            </div>
-                            <div id="calendarDaysGrid" class="grid grid-cols-4 sm:grid-cols-7 gap-2.5">
-                                <!-- Populated by JS -->
-                            </div>
-                        </div>
-
-                        <!-- Step 2: Select Time Slot -->
-                        <div class="mb-6">
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-ocean mb-3">2. Select Preferred Time Slot</label>
-                            <div id="calendarTimeSlots" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                <!-- Populated by JS -->
-                            </div>
-                        </div>
-
-                        <!-- Step 3: Contact Details & Dossier Attachment -->
-                        <form id="calendarBookingForm" onsubmit="submitCalendarBooking(event)" class="space-y-4 pt-4 border-t border-gray-100">
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-ocean">3. Your Details & Attached Charter Configuration</label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <input type="text" id="calName" required placeholder="Full Name (e.g., Lady Elena Vance)" class="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:border-ocean">
-                                </div>
-                                <div>
-                                    <input type="email" id="calEmail" required placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:border-ocean">
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <input type="tel" id="calPhone" placeholder="Phone / WhatsApp (Optional)" class="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:border-ocean">
-                                </div>
-                                <div>
-                                    <select id="calFormat" class="w-full px-4 py-3 rounded-lg border border-gray-300 text-sm focus:outline-none focus:border-ocean bg-white">
-                                        <option value="Video Presentation (Zoom / Google Meet)">Video Presentation (Show Yacht Walkthroughs)</option>
-                                        <option value="Private Phone Call">Direct Telephone Advisory Call</option>
-                                        <option value="WhatsApp Executive Briefing">WhatsApp Executive Briefing</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <textarea id="calNotes" rows="2" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 text-xs text-gray-700 focus:outline-none focus:border-ocean" placeholder="Auto-attached Dream Profile notes..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full py-4 bg-ocean hover:bg-ocean-light text-gold font-bold text-xs uppercase tracking-widest rounded-lg transition-all shadow-lg">
-                                Confirm Calendar Appointment & Send Charter Dossier
-                            </button>
-                        </form>
-
-                        <!-- Calendar Confirmation Box -->
-                        <div id="calendarConfirmationBox" class="hidden mt-6 p-6 rounded-xl bg-emerald-950 text-white border border-emerald-500/40">
-                            <!-- Populated on submit -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: AI Chat Scheduling Assistant & Broker Promise (5 Cols) -->
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="bg-ocean text-white rounded-2xl p-8 shadow-xl border border-gold/30">
-                        <span class="text-gold text-xs uppercase tracking-[0.2em] block mb-2">Prefer Conversational Booking?</span>
-                        <h3 class="font-serif text-2xl sm:text-3xl mb-3">Schedule via AI Concierge Chat</h3>
-                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
-                            Don't feel like filling out forms? Simply click below and Aria will ask for your name, email, and preferred day right inside the chat interface and lock in your broker appointment immediately.
-                        </p>
-                        <button onclick="startChatAppointmentFlow()" class="w-full py-4 bg-gold hover:bg-gold-light text-ocean font-bold text-xs uppercase tracking-widest rounded-lg transition-all shadow-lg flex items-center justify-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-                            <span>Book My Appointment in AI Chat</span>
-                        </button>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                        <h4 class="font-serif text-xl text-ocean mb-4">What Happens on Your 20-Minute Call?</h4>
-                        <ul class="space-y-3.5 text-sm text-gray-600 font-light">
-                            <li class="flex items-start gap-3">
-                                <span class="text-gold-dark font-bold">✓</span>
-                                <span><strong class="text-ocean font-medium">Off-Market Fleet Access:</strong> Inspect 3–5 vetted yachts with real-time calendar availability in your target week.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-gold-dark font-bold">✓</span>
-                                <span><strong class="text-ocean font-medium">Crew & Chef Matching:</strong> Review actual Captain biographies and past guest culinary portfolios.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-gold-dark font-bold">✓</span>
-                                <span><strong class="text-ocean font-medium">All-In APA & Tax Clarity:</strong> Receive a crystal-clear breakdown of VAT, fuel estimates, and port fees with zero surprises.</span>
-                            </li>
-                        </ul>
-                        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                            <span>Direct Desk: +1 (800) 555-MED1</span>
-                            <span>charter@headtothemed.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. Footer -->
-    <footer class="bg-ocean-dark py-12 border-t border-white/10 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3">
-                <img src="Logo.jpg" alt="Head to the Med" class="h-10 w-auto rounded border border-gold/30" onerror="this.style.display='none'">
-                <div>
-                    <span class="font-serif text-xl font-bold text-white tracking-widest uppercase leading-none block">
+    <!-- 6. Footer -->
+    <footer class="bg-ocean-dark py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="flex flex-col group">
+                    <span class="font-serif text-xl font-bold text-white tracking-widest uppercase leading-none">
                         Head to the Med
                     </span>
-                    <span class="text-gold font-sans text-[0.55rem] tracking-[0.3em] uppercase">Endless Horizon • MYBA Charter Specialists</span>
-                </div>
+                    <div class="flex items-center mt-1.5">
+                        <div class="h-px w-4 bg-gold"></div>
+                        <span class="text-gold font-sans text-[0.55rem] tracking-[0.3em] uppercase ml-2">Endless Horizon</span>
+                    </div>
+                </a>
             </div>
-            <p class="font-sans text-gray-400 text-xs font-light text-center">
-                &copy; 2026 Head to the Med Luxury Yacht Brokerage. Monaco • Palma • Athens • Fort Lauderdale.
+            <p class="font-sans text-gray-500 text-sm font-light text-center md:text-left mt-6 md:mt-0">
+                &copy; 2026 Head to the Med Premium Yacht Brokerage. All rights reserved.
             </p>
-            <div class="flex space-x-6 text-xs text-gray-400">
-                <button onclick="openApiModal()" class="hover:text-gold transition-colors">AI Engine Settings</button>
-                <a href="#dream-studio" class="hover:text-gold transition-colors">AI Concierge</a>
-                <a href="#booking-section" class="hover:text-gold transition-colors">Calendar</a>
+            <div class="flex space-x-6 mt-6 md:mt-0">
+                <a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Terms of Service</a>
             </div>
         </div>
     </footer>
-
-    <!-- Floating Quick-Access AI Concierge Pill -->
-    <button onclick="scrollToSection('dream-studio')" class="fixed bottom-6 right-6 z-30 bg-ocean text-white border-2 border-gold px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-3 hover:bg-ocean-light transition-all pulse-gold group">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-        <div class="text-left">
-            <span class="block text-[10px] uppercase tracking-widest text-gold leading-none">AI Charter Concierge</span>
-            <span class="font-serif text-sm text-white">Configure Dream & Book</span>
-        </div>
-    </button>
-
-    <!-- Modal: Detailed Yacht Inspection & Deck Plan Specs -->
-    <div id="yachtDetailModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-ocean text-white border border-gold/40 rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl my-8">
-            <div id="yachtModalContent">
-                <!-- Populated dynamically by JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal: Optional Live Gemini API Key Configuration -->
-    <div id="apiModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-ocean text-white border border-gold/40 rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="font-serif text-2xl text-gold">AI Concierge Engine Settings</h3>
-                <button onclick="closeApiModal()" class="text-gray-400 hover:text-white">✕</button>
-            </div>
-            <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                By default, <strong class="text-white">Aria</strong> runs on our built-in Mediterranean Charter Intelligence Engine with instant response times. Optionally, you can paste a Google Gemini API key below to power live generative LLM responses.
-            </p>
-            <div class="mb-4">
-                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-1.5">Google Gemini API Key (Optional)</label>
-                <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy..." class="w-full px-3.5 py-2.5 rounded bg-ocean-dark border border-white/20 text-sm text-white focus:outline-none focus:border-gold">
-            </div>
-            <div class="flex justify-end gap-3">
-                <button onclick="closeApiModal()" class="px-4 py-2 text-xs uppercase tracking-wider text-gray-300 hover:text-white">Cancel</button>
-                <button onclick="saveApiKey()" class="px-5 py-2.5 bg-gold text-ocean font-bold text-xs uppercase tracking-wider rounded">Save Settings</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Application Data & Interactive AI Logic -->
-    <script>
-        // ============================================================================
-        // 1. CATALOG DATA: YACHT FLEET, DESTINATIONS, CULINARY, VIDEO SCENES
-        // ============================================================================
-        const YACHT_FLEET = [
-            {
-                id: 'aurelia',
-                name: 'M/Y Aurelia Sovereign',
-                length: '42m (138ft)',
-                builder: 'Benetti Custom Oasis',
-                category: 'motoryacht',
-                categoryLabel: 'Luxury Motor Yacht',
-                weeklyRate: 115000,
-                apaEstimate: 34500,
-                guests: 10,
-                cabins: '5 En-Suite Staterooms (1 Master on Main Deck, 2 VIP, 2 Twin)',
-                crew: 8,
-                cruisingSpeed: '15 Knots',
-                regions: ['amalfi', 'riviera', 'balearics'],
-                vibes: ['romance', 'glamour', 'culinary'],
-                image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=85',
-                tagline: 'Fold-out infinity beach club, sundeck glass Jacuzzi, and Michelin-trained Italian chef.',
-                waterToys: ['2x Sea-Doo GTX Waverunners', '3x F5S Seabobs', 'Lift3 eFoil Board', '9m Riva Chase Tender', 'Inflatable Sea Pool'],
-                highlights: [
-                    '270-degree Hydraulic Oasis Beach Deck right at sea level',
-                    'Full-beam Master Suite with private fold-down sea balcony',
-                    'Zero-speed gyroscopic stabilizers for glass-calm sleep at anchor'
-                ]
-            },
-            {
-                id: 'olympus',
-                name: 'M/Y Titan of Monaco',
-                length: '62m (203ft)',
-                builder: 'Lürssen / Espen Øino Design',
-                category: 'superyacht',
-                categoryLabel: 'Pedigree Superyacht',
-                weeklyRate: 290000,
-                apaEstimate: 87000,
-                guests: 12,
-                cabins: '6 Staterooms (Private Owner\'s Deck, VIP Suite, 4 Guest Suites)',
-                crew: 15,
-                cruisingSpeed: '16 Knots',
-                regions: ['riviera', 'amalfi', 'cyclades'],
-                vibes: ['glamour', 'party', 'culinary'],
-                image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=85',
-                tagline: 'Touch-and-go helipad, glass-bottom pool, cinema lounge, and wellness spa with hammam.',
-                waterToys: ['12m Limousine Tender', '4x Seabobs', '2x Yamaha GP1800R Jet Skis', 'Private 2-Person Submersible', 'Waterslide from Bridge Deck'],
-                highlights: [
-                    'Dedicated Owner\'s Deck with private foredeck jacuzzi and firepit',
-                    'Onboard Sommelier & 600-bottle temperature-controlled wine vault',
-                    'Full Turkish Hammam, massage sanctuary &Technogym glass studio'
-                ]
-            },
-            {
-                id: 'solaris',
-                name: 'S/Y Aeolian Solaris',
-                length: '34m (112ft)',
-                builder: 'Sunreef 110 Eco-Luxury Catamaran',
-                category: 'catamaran',
-                categoryLabel: 'Ultra-Wide Luxury Catamaran',
-                weeklyRate: 68000,
-                apaEstimate: 20400,
-                guests: 10,
-                cabins: '5 Panoramic Queen Cabins',
-                crew: 6,
-                cruisingSpeed: '12 Knots (Silent Solar-Hybrid)',
-                regions: ['cyclades', 'croatia', 'balearics'],
-                vibes: ['family', 'adventure', 'relaxation'],
-                image: 'https://images.unsplash.com/photo-1540946485063-a40da27545f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=85',
-                tagline: 'Massive 44ft beam stability, whisper-quiet solar cruising, and shallow draft for secret lagoons.',
-                waterToys: ['2x Seabobs', 'Wing-Foiling & Kite Gear', 'Wakeboard & Water Skis', '4x Transparent Kayaks & SUPs', 'Floating Trampoline Oasis'],
-                highlights: [
-                    'Whisper-quiet zero-emission solar mode at anchor—no generator hum',
-                    'Shallow 2.1m draft accesses shallow turquoise beaches larger yachts cannot reach',
-                    'Expansive flybridge outdoor cinema & child-friendly wrap-around decks'
-                ]
-            },
-            {
-                id: 'mistral',
-                name: 'M/Y Riva Bellissima',
-                length: '28m (92ft)',
-                builder: 'Riva 90 Argo Sportfly',
-                category: 'motoryacht',
-                categoryLabel: 'Sleek Italian Sport Yacht',
-                weeklyRate: 52000,
-                apaEstimate: 15600,
-                guests: 8,
-                cabins: '4 En-Suite Cabins',
-                crew: 4,
-                cruisingSpeed: '26 Knots (30 Knots Max)',
-                regions: ['amalfi', 'riviera', 'balearics'],
-                vibes: ['romance', 'glamour', 'adventure'],
-                image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=85',
-                tagline: 'High-speed Italian glamour—breakfast in Positano, lunch in Capri, sunset in Ischia.',
-                waterToys: ['Williams SportJet 395', '2x F5S Seabobs', 'Radinn Electric Jetboard', 'Snorkeling & Scuba Gear'],
-                highlights: [
-                    'Exhilarating 26-knot cruising speed cuts island-hopping time in half',
-                    'Iconic metallic Riva shark-grey hull that turns heads in every marina',
-                    'Ideal for 2–4 couples seeking high-style coastal club hopping'
-                ]
-            }
-        ];
-
-        const DESTINATIONS = {
-            amalfi: {
-                id: 'amalfi',
-                name: 'Amalfi Coast & Capri',
-                country: 'Italy',
-                subtitle: 'Positano • Capri • Ravello • Ischia • Nerano',
-                season: 'May – October (Peak Glamour: June–Sept)',
-                image: 'https://images.unsplash.com/photo-1516483638261-f40af5aa34fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=85',
-                summary: 'Drop anchor beneath vertical lemon-terrace cliffs, tender privately into Lo Scoglio in Nerano for sea-urchin pasta, and swim in Capri\'s emerald grottos before day-boats arrive.',
-                itinerary: 'Naples Embarkation → Procida & Ischia Thermal Springs → Capri Faraglioni → Nerano → Positano → Amalfi & Ravello',
-                experiences: [
-                    { title: 'Dawn Blue Grotto & Private Anacapri Villa', desc: 'Beat the crowds at 7:30 AM followed by a private Vintage Fiat 500 drive to Villa San Michele.' },
-                    { title: 'Cliffside Ravello Symphony & Truffle Dinner', desc: 'Private transfer up to Villa Cimbrone gardens with a sommelier-hosted Campanian wine tasting.' },
-                    { title: 'Tender-to-Table at Conca del Sogno', desc: 'Step directly from your yacht\'s chase boat onto the dock of the Med\'s most iconic seaside lunch club.' }
-                ]
-            },
-            riviera: {
-                id: 'riviera',
-                name: 'French Riviera (Côte d’Azur)',
-                country: 'France & Monaco',
-                subtitle: 'Monaco • Cap Ferrat • Cannes • St. Tropez • Îles d’Hyères',
-                season: 'May – October',
-                image: 'https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=85',
-                summary: 'The undisputed capital of superyachting. Combine high-octane Monte Carlo nights and Pampelonne beach clubs with the pine-scented barefoot sanctuary of Porquerolles.',
-                itinerary: 'Monaco Port Hercule → Eze & Saint-Jean-Cap-Ferrat → Antibes → Cannes Lérins Islands → St. Tropez → Porquerolles',
-                experiences: [
-                    { title: 'VIP Arrival at Club 55 & LouLou Ramatuelle', desc: 'Your yacht anchors directly off Pampelonne Beach with priority tender jetty service and front-row tables.' },
-                    { title: 'Private Perfumery Creation in Grasse', desc: 'Helicopter from your sundeck to a historic Provençal estate to blend your bespoke signature scent.' },
-                    { title: 'Monastery Wine Tasting on Île Saint-Honorat', desc: 'Taste rare vintages crafted by Cistercian monks on a car-free island off Cannes.' }
-                ]
-            },
-            cyclades: {
-                id: 'cyclades',
-                name: 'Greek Islands (Cyclades)',
-                country: 'Greece',
-                subtitle: 'Mykonos • Paros • Milos • Koufonisia • Santorini',
-                season: 'May – October',
-                image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=85',
-                summary: 'Powdery whitewashed villages, volcanic lunar cliffs at Kleftiko, and crystalline Aegean water so clear your yacht appears to float in mid-air.',
-                itinerary: 'Athens / Mykonos → Delos Sacred Ruins → Paros & Antiparos → Koufonisia Lagoons → Milos Kleftiko → Santorini Caldera',
-                experiences: [
-                    { title: 'Private Torchlit Beach BBQ in Milos', desc: 'Our crew sets up Persian rugs, lanterns, and a wood-fired Aegean lobster feast on an uninhabited cove.' },
-                    { title: 'After-Hours Archeologist Tour of Delos', desc: 'Walk the birthplace of Apollo with a private historian before sailing to Scorpios Mykonos for sunset.' },
-                    { title: 'Santorini Caldera Assyrtiko Vineyard Immersion', desc: 'Anchor beneath Oia\'s cliffs and ascend for a private volcanic wine cellar vertical tasting.' }
-                ]
-            },
-            balearics: {
-                id: 'balearics',
-                name: 'Balearic Islands',
-                country: 'Spain',
-                subtitle: 'Mallorca • Ibiza • Formentera • Menorca',
-                season: 'May – October',
-                image: 'https://images.unsplash.com/photo-1539037116277-4db20f01b8e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=85',
-                summary: 'From the UNESCO Serra de Tramuntana mountains of Mallorca to the Caribbean-turquoise sandbars of Espalmador and Formentera.',
-                itinerary: 'Palma de Mallorca → Deià & Sóller → Cabrera National Park → Ibiza Town → Espalmador → Formentera Ses Illetes',
-                experiences: [
-                    { title: 'Formentera Turquoise Lagoon & Beso Beach', desc: 'Paddleboard over neon-blue Posidonia meadows followed by barefoot paella at Juan y Andrea.' },
-                    { title: 'Serra de Tramuntana Olive Estate & Michelin Picnic', desc: 'Anchor beneath La Foradada rock and dine by open wood-fire overlooking the sea.' },
-                    { title: 'Es Vedrà Sunset Sound Healing & Cocktails', desc: 'Drop anchor facing the mystical monolith of Es Vedrà with a private acoustic guitarist onboard.' }
-                ]
-            },
-            croatia: {
-                id: 'croatia',
-                name: 'Croatian Dalmatian Coast',
-                country: 'Croatia',
-                subtitle: 'Split • Hvar • Vis • Korčula • Dubrovnik',
-                season: 'May – October',
-                image: 'https://images.unsplash.com/photo-1555990538-1e6c0c12db88?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=85',
-                summary: 'Over 1,200 pine-cloaked islands, Venetian walled fortresses, warm calm waters ideal for water sports, and organic island oyster farms.',
-                itinerary: 'Split → Brač → Hvar & Pakleni Islands → Vis Blue Cave → Korčula → Mljet National Park → Dubrovnik',
-                experiences: [
-                    { title: 'Ston Bay Private Oyster & Champagne Barge', desc: 'Harvest wild Adriatic oysters straight from the water paired with crisp Croatian sparkling wines.' },
-                    { title: 'Submarine Tunnels & Stiniva Cove on Vis', desc: 'Take the yacht\'s chase tender inside Cold War sea tunnels before swimming into hidden pebble amphitheaters.' },
-                    { title: 'Private Dubrovnik Walls Twilight Walk', desc: 'Explore the medieval ramparts after cruise visitors depart, followed by rooftop fine dining.' }
-                ]
-            }
-        };
-
-        const CULINARY_CURATIONS = [
-            {
-                id: 'crudo',
-                title: 'Mediterranean Raw Bar & Coastal Crudo',
-                chef: 'Chef Lorenzo Bellini (Ex-3* Michelin Osteria)',
-                tag: 'Amalfi & Riviera Favorite',
-                image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-                description: 'Wild red Mazara del Vallo prawns with Amalfi lemon zest, line-caught sea bream carpaccio, handmade tagliolini with sea urchin, and chilled Dom Pérignon Vintage on the aft deck.',
-                sampleMenu: ['Mazara Red Prawn Tartare & Oscietra Caviar', 'Handmade Nerano Courgette & Burrata Ravioli', 'Salt-Crusted Wild Branzino Carved Tableside', 'Caprese Delizia al Limone']
-            },
-            {
-                id: 'aegean',
-                title: 'Aegean Fire-Grilled Lobster & Biodynamic Wines',
-                chef: 'Chef Eleni Papadopoulos (Athenian Gastronomy Award)',
-                tag: 'Cyclades & Croatia Favorite',
-                image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-                description: 'Charcoal-grilled Aegean langoustines with wild oregano oil, sun-ripened Santorini cherry tomato mille-feuille, and rare volcanic Assyrtiko wines served under the stars.',
-                sampleMenu: ['Sea Bass Ceviche with Critamo Sea Fennel', 'Charcoal Grilled Langoustines & Saffron Orzo', 'Slow-Braised Naxos Lamb with Thyme Honey', 'Pistachio Baklava Mille-Feuille']
-            },
-            {
-                id: 'wellness',
-                title: 'Wellness Longevity & Family Interactive Feasts',
-                chef: 'Chef Mateo Serra (Balearic Farm-to-Teak Specialist)',
-                tag: 'Family & Balearics Favorite',
-                image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80',
-                description: 'Cold-pressed sunrise elixirs after morning Seabob sessions, wood-fired Balearic seafood paella lunches, and interactive sushi & pizza nights tailored for children and adults alike.',
-                sampleMenu: ['Matcha, Spirulina & Mallorcan Orange Sunrise Bowls', 'Formentera Lobster & Saffron Bomba Rice Paella', 'Wagyu & Black Truffle Sliders on the Flybridge', 'Artisanal Gelato & Churros Cart Onboard']
-            }
-        ];
-
-        const VIDEO_CLIPS = {
-            amalfi: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-yacht-sailing-in-the-sea-41444-large.mp4',
-            riviera: 'https://assets.mixkit.co/videos/preview/mixkit-luxury-yacht-sailing-in-the-sea-at-sunset-41446-large.mp4',
-            cyclades: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-boat-sailing-on-clear-blue-water-41439-large.mp4',
-            balearics: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-yacht-sailing-in-the-sea-41444-large.mp4',
-            croatia: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-boat-sailing-on-clear-blue-water-41439-large.mp4'
-        };
-
-        // ============================================================================
-        // 2. APPLICATION STATE
-        // ============================================================================
-        let currentState = {
-            destinationKey: 'amalfi',
-            matchedYachtId: 'aurelia',
-            vibeLabel: 'Romantic & Iconic Glamour',
-            guestsLabel: 'Up to 8 Guests (4 Cabins)',
-            culinaryKey: 'crudo',
-            culinaryLabel: 'Michelin Coastal & Crudo',
-            momentKey: 'michelin',
-            completionScore: 30,
-            activeVideoSceneIndex: 0,
-            selectedDate: 'Thu, Nov 19',
-            selectedTime: '11:00 AM EST',
-            chatAppointmentStep: null, // null | 'ask_name' | 'ask_email' | 'ask_time'
-            visitorName: '',
-            visitorEmail: '',
-            preferredSlot: '',
-            geminiApiKey: localStorage.getItem('httm_gemini_key') || ''
-        };
-
-        let videoSceneInterval = null;
-
-        // ============================================================================
-        // 3. INITIALIZATION & RENDERING
-        // ============================================================================
-        document.addEventListener('DOMContentLoaded', () => {
-            renderInitialChat();
-            renderFleet('all');
-            renderDestinationTabs();
-            renderDestinationSpotlight(currentState.destinationKey);
-            renderCulinaryGrid();
-            renderCalendarWidget();
-            updateDossierUI();
-            updateVideoStoryboardUI();
-            startVideoSceneCycle();
-            if (currentState.geminiApiKey) {
-                document.getElementById('aiModeBadge').textContent = 'Gemini Live AI';
-                document.getElementById('geminiApiKeyInput').value = currentState.geminiApiKey;
-            }
-        });
-
-        function scrollToSection(id) {
-            const el = document.getElementById(id);
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // ============================================================================
-        // 4. CONVERSATIONAL AI CONCIERGE & DREAM EXTRACTOR
-        // ============================================================================
-        function renderInitialChat() {
-            const chatBox = document.getElementById('chatMessages');
-            chatBox.innerHTML = '';
-            appendAIMessage(
-                `Welcome aboard <strong>Head to the Med</strong>. I am <strong>Aria</strong>, your private Mediterranean Charter Concierge.<br><br>My role is to uncover your dream escape—and show you why a private crewed yacht beats any five-star resort on earth. Tell me: <em>Who are you imagining bringing onboard, and what kind of atmosphere makes you feel most alive?</em>`,
-                [
-                    { label: '🥂 Romantic Amalfi & Capri for Couples', action: () => processUserDreamInput('We want a romantic trip along the Amalfi Coast and Capri for 4 to 6 guests with Michelin dining') },
-                    { label: '🛥️ Superyacht Glamour in Monaco & St. Tropez', action: () => processUserDreamInput('Show me a 60m superyacht for 10-12 guests in Monaco and St. Tropez with beach clubs') },
-                    { label: '🌊 Greek Islands Catamaran & Water Toys', action: () => processUserDreamInput('Family adventure in the Greek Islands for 8 guests with Seabobs, hidden coves, and a private chef') },
-                    { label: '📅 Book a Private Consultation Call', action: () => startChatAppointmentFlow() }
-                ]
-            );
-        }
-
-        function appendAIMessage(htmlText, quickReplies = []) {
-            const chatBox = document.getElementById('chatMessages');
-            const wrapper = document.createElement('div');
-            wrapper.className = 'flex items-start gap-3';
-            wrapper.innerHTML = `
-                <div class="w-8 h-8 rounded-full bg-gold text-ocean font-serif font-bold flex items-center justify-center shrink-0 text-sm shadow mt-0.5">A</div>
-                <div class="bg-ocean-light/95 border border-gold/25 rounded-2xl rounded-tl-none px-4 py-3.5 text-sm text-gray-100 leading-relaxed max-w-[88%] shadow-md">
-                    ${htmlText}
-                </div>
-            `;
-            chatBox.appendChild(wrapper);
-            chatBox.scrollTop = chatBox.scrollHeight;
-
-            renderQuickReplyButtons(quickReplies);
-        }
-
-        function appendUserMessage(text) {
-            const chatBox = document.getElementById('chatMessages');
-            const wrapper = document.createElement('div');
-            wrapper.className = 'flex justify-end';
-            wrapper.innerHTML = `
-                <div class="bg-gold text-ocean font-medium rounded-2xl rounded-tr-none px-4 py-3 text-sm max-w-[82%] shadow-md">
-                    ${escapeHtml(text)}
-                </div>
-            `;
-            chatBox.appendChild(wrapper);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        function renderQuickReplyButtons(quickReplies) {
-            const container = document.getElementById('chatQuickReplies');
-            container.innerHTML = '';
-            quickReplies.forEach(item => {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = 'px-3 py-1.5 rounded-full bg-ocean-light hover:bg-gold hover:text-ocean text-gray-200 border border-gold/30 text-xs transition-all';
-                btn.textContent = item.label;
-                btn.onclick = item.action;
-                container.appendChild(btn);
-            });
-        }
-
-        function handleUserChatSubmit(e) {
-            e.preventDefault();
-            const input = document.getElementById('chatInput');
-            const text = input.value.trim();
-            if (!text) return;
-            input.value = '';
-            processUserDreamInput(text);
-        }
-
-        async function processUserDreamInput(text) {
-            appendUserMessage(text);
-
-            // Check if currently in conversational appointment booking flow
-            if (currentState.chatAppointmentStep) {
-                handleChatAppointmentStep(text);
-                return;
-            }
-
-            const lower = text.toLowerCase();
-
-            // Check if user wants to schedule an appointment / contact via chat
-            if (lower.includes('book') && (lower.includes('call') || lower.includes('appointment') || lower.includes('consult') || lower.includes('schedule') || lower.includes('calendar'))) {
-                startChatAppointmentFlow();
-                return;
-            }
-
-            // Extract dreams & preferences from natural language
-            let updatedFields = [];
-
-            if (lower.includes('amalfi') || lower.includes('capri') || lower.includes('positano') || lower.includes('italy')) {
-                currentState.destinationKey = 'amalfi';
-                updatedFields.push('Amalfi Coast & Capri');
-            } else if (lower.includes('monaco') || lower.includes('riviera') || lower.includes('tropez') || lower.includes('cannes') || lower.includes('france')) {
-                currentState.destinationKey = 'riviera';
-                updatedFields.push('French Riviera & Monaco');
-            } else if (lower.includes('greek') || lower.includes('greece') || lower.includes('mykonos') || lower.includes('santorini') || lower.includes('cyclades') || lower.includes('milos')) {
-                currentState.destinationKey = 'cyclades';
-                updatedFields.push('Greek Cyclades');
-            } else if (lower.includes('ibiza') || lower.includes('mallorca') || lower.includes('formentera') || lower.includes('spain') || lower.includes('balearic')) {
-                currentState.destinationKey = 'balearics';
-                updatedFields.push('Balearic Islands');
-            } else if (lower.includes('croatia') || lower.includes('hvar') || lower.includes('dubrovnik') || lower.includes('split')) {
-                currentState.destinationKey = 'croatia';
-                updatedFields.push('Croatian Dalmatian Coast');
-            }
-
-            // Extract Yacht & Group size
-            if (lower.includes('superyacht') || lower.includes('60m') || lower.includes('12') || lower.includes('helipad') || lower.includes('submersible') || lower.includes('party') || lower.includes('glamour')) {
-                currentState.matchedYachtId = 'olympus';
-                currentState.vibeLabel = 'Superyacht Glamour & VIP Access';
-                currentState.guestsLabel = '10–12 Guests (6 Staterooms)';
-                updatedFields.push('62m Superyacht M/Y Titan of Monaco');
-            } else if (lower.includes('catamaran') || lower.includes('family') || lower.includes('kids') || lower.includes('solar') || lower.includes('lagoon') || lower.includes('adventure')) {
-                currentState.matchedYachtId = 'solaris';
-                currentState.vibeLabel = 'Barefoot Luxury & Water Adventure';
-                currentState.guestsLabel = '8–10 Guests (5 Queen Cabins)';
-                currentState.momentKey = 'toys';
-                updatedFields.push('34m Eco-Luxury Catamaran S/Y Aeolian Solaris');
-            } else if (lower.includes('fast') || lower.includes('sport') || lower.includes('riva') || lower.includes('couple') || lower.includes('4 guest') || lower.includes('6 guest')) {
-                currentState.matchedYachtId = 'mistral';
-                currentState.vibeLabel = 'High-Style Coastal Island Hopping';
-                currentState.guestsLabel = '4–8 Guests (4 Cabins)';
-                updatedFields.push('28m Sport Yacht M/Y Riva Bellissima');
-            } else if (lower.includes('8 guest') || lower.includes('10 guest') || lower.includes('jacuzzi') || lower.includes('benetti') || lower.includes('romantic')) {
-                currentState.matchedYachtId = 'aurelia';
-                currentState.vibeLabel = 'Intimate Elegance & Beach Club Living';
-                currentState.guestsLabel = '8–10 Guests (5 Staterooms)';
-                updatedFields.push('42m M/Y Aurelia Sovereign');
-            }
-
-            // Extract Culinary / Experiences
-            if (lower.includes('michelin') || lower.includes('crudo') || lower.includes('wine') || lower.includes('truffle') || lower.includes('chef') || lower.includes('food')) {
-                currentState.culinaryKey = 'crudo';
-                currentState.culinaryLabel = 'Michelin Crudo & Sommelier Cellar';
-                currentState.momentKey = 'michelin';
-            } else if (lower.includes('lobster') || lower.includes('bbq') || lower.includes('greek') || lower.includes('seafood')) {
-                currentState.culinaryKey = 'aegean';
-                currentState.culinaryLabel = 'Wood-Fired Aegean Lobster & Local Wines';
-            } else if (lower.includes('toy') || lower.includes('seabob') || lower.includes('jetski') || lower.includes('kids') || lower.includes('paella')) {
-                currentState.culinaryKey = 'wellness';
-                currentState.culinaryLabel = 'Interactive Family & Farm-to-Teak';
-                currentState.momentKey = 'toys';
-            }
-
-            currentState.completionScore = Math.min(95, currentState.completionScore + 25);
-
-            // Sync all page sections immediately
-            updateDossierUI();
-            renderFleet('all');
-            renderDestinationTabs();
-            renderDestinationSpotlight(currentState.destinationKey);
-            renderCulinaryGrid();
-            updateVideoStoryboardUI();
-
-            const matchedYacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-            const matchedDest = DESTINATIONS[currentState.destinationKey];
-
-            // Check if user requested price breakdown
-            if (lower.includes('price') || lower.includes('cost') || lower.includes('quote') || lower.includes('budget') || lower.includes('apa')) {
-                const totalEst = matchedYacht.weeklyRate + matchedYacht.apaEstimate;
-                const perPerson = Math.round(totalEst / matchedYacht.guests);
-                appendAIMessage(
-                    `Here is the transparent MYBA charter breakdown for <strong>${matchedYacht.name} (${matchedYacht.length})</strong> in <strong>${matchedDest.name}</strong>:<br><br>` +
-                    `• <strong>Base Weekly Charter Rate:</strong> €${matchedYacht.weeklyRate.toLocaleString()}/wk (includes yacht, ${matchedYacht.crew} dedicated crew, private chef & all water toys)<br>` +
-                    `• <strong>Estimated 30% APA (Fuel, Fine Dining & Marinas):</strong> €${matchedYacht.apaEstimate.toLocaleString()}<br>` +
-                    `• <strong>Estimated All-In Total:</strong> €${totalEst.toLocaleString()} for up to ${matchedYacht.guests} guests (~€${perPerson.toLocaleString()} per guest for a full 7-day private superyacht week).<br><br>` +
-                    `Would you like me to generate your <strong>AI Charter Preview Film</strong> for this setup, or lock in a 15-minute consultation with our Senior Broker?`,
-                    [
-                        { label: '🎬 Generate & Watch AI Charter Film', action: () => generateAIVideoAndScroll() },
-                        { label: '📅 Schedule Broker Call in Chat', action: () => startChatAppointmentFlow() },
-                        { label: '🛥️ Compare Another Yacht Tier', action: () => scrollToSection('fleet') }
-                    ]
-                );
-                return;
-            }
-
-            // Optional Live Gemini API call if configured
-            if (currentState.geminiApiKey) {
-                try {
-                    const geminiReply = await fetchLiveGeminiResponse(text, matchedYacht, matchedDest);
-                    if (geminiReply) {
-                        appendAIMessage(geminiReply, [
-                            { label: '🎬 Synthesize AI Film of This Selection', action: () => generateAIVideoAndScroll() },
-                            { label: '💰 See All-In Price & APA Breakdown', action: () => processUserDreamInput('Show me the all-in price breakdown') },
-                            { label: '📅 Book Consultation in Chat', action: () => startChatAppointmentFlow() }
-                        ]);
-                        return;
-                    }
-                } catch (err) {
-                    console.warn('Gemini fallback to local intelligence:', err);
-                }
-            }
-
-            // Rich Persuasive Response
-            appendAIMessage(
-                `I have reconfigured the page around your vision for <strong>${matchedDest.name}</strong> aboard <strong>${matchedYacht.name} (${matchedYacht.length})</strong>.<br><br>` +
-                `Imagine this: instead of sharing a hotel pool with 200 strangers, your captain anchors in a mirror-calm turquoise cove off <em>${matchedDest.subtitle.split('•')[1] || matchedDest.name}</em>. Your crew deploys the Seabobs and Riva tender while your private chef prepares <strong>${currentState.culinaryLabel}</strong> on the teak aft deck.<br><br>` +
-                `I have highlighted your matched yacht, local excursions, and menu below—and queued up a <strong>4-scene AI Charter Film</strong> demonstrating your exact selection. What shall we explore next?`,
-                [
-                    { label: '🎬 Watch My AI-Generated Charter Video', action: () => generateAIVideoAndScroll() },
-                    { label: '💰 Calculate All-In Pricing & APA', action: () => processUserDreamInput('Give me a full all-in pricing breakdown') },
-                    { label: '🍽️ Customize Onboard Chef Menu', action: () => scrollToSection('culinary') },
-                    { label: '📅 Book a Private Broker Call Now', action: () => startChatAppointmentFlow() }
-                ]
-            );
-        }
-
-        // Conversational Appointment Booking inside Chat
-        function startChatAppointmentFlow() {
-            scrollToSection('dream-studio');
-            currentState.chatAppointmentStep = 'ask_name';
-            const matchedYacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-            const matchedDest = DESTINATIONS[currentState.destinationKey];
-            appendAIMessage(
-                `I would be delighted to schedule your private 20-minute Charter Advisory Call and attach your <strong>${matchedDest.name} • ${matchedYacht.name}</strong> dossier.<br><br>To begin, <strong>what is your full name?</strong>`,
-                [
-                    { label: 'Prefer Visual Calendar? Open Below ↓', action: () => { currentState.chatAppointmentStep = null; scrollToSection('booking-section'); } }
-                ]
-            );
-            document.getElementById('chatInput').placeholder = 'Enter your full name...';
-            document.getElementById('chatInput').focus();
-        }
-
-        function handleChatAppointmentStep(text) {
-            if (currentState.chatAppointmentStep === 'ask_name') {
-                currentState.visitorName = text;
-                currentState.chatAppointmentStep = 'ask_email';
-                appendAIMessage(
-                    `Pleasure to meet you, <strong>${escapeHtml(currentState.visitorName)}</strong>. Where should I send your calendar invitation and private yacht lookbook? <em>(Please enter your email address)</em>`,
-                    []
-                );
-                document.getElementById('chatInput').placeholder = 'Enter your email address...';
-                return;
-            }
-
-            if (currentState.chatAppointmentStep === 'ask_email') {
-                currentState.visitorEmail = text;
-                currentState.chatAppointmentStep = 'ask_time';
-                appendAIMessage(
-                    `Perfect. Which of these upcoming Senior Broker slots works best for your consultation, or feel free to type any day/time that suits you:`,
-                    [
-                        { label: 'Thu, Nov 19 at 11:00 AM EST', action: () => processUserDreamInput('Thu, Nov 19 at 11:00 AM EST') },
-                        { label: 'Fri, Nov 20 at 2:00 PM EST', action: () => processUserDreamInput('Fri, Nov 20 at 2:00 PM EST') },
-                        { label: 'Mon, Nov 23 at 4:30 PM EST', action: () => processUserDreamInput('Mon, Nov 23 at 4:30 PM EST') }
-                    ]
-                );
-                document.getElementById('chatInput').placeholder = 'Pick a slot or type your preferred day & time...';
-                return;
-            }
-
-            if (currentState.chatAppointmentStep === 'ask_time') {
-                currentState.preferredSlot = text;
-                currentState.chatAppointmentStep = null;
-                document.getElementById('chatInput').placeholder = "Describe your dream trip or ask any question...";
-
-                const matchedYacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-                const matchedDest = DESTINATIONS[currentState.destinationKey];
-
-                // Also populate the visual calendar confirmation
-                document.getElementById('calName').value = currentState.visitorName;
-                document.getElementById('calEmail').value = currentState.visitorEmail;
-
-                appendAIMessage(
-                    `✅ <strong>Consultation Confirmed!</strong><br><br>` +
-                    `• <strong>Guest:</strong> ${escapeHtml(currentState.visitorName)} (${escapeHtml(currentState.visitorEmail)})<br>` +
-                    `• <strong>Scheduled Slot:</strong> ${escapeHtml(currentState.preferredSlot)}<br>` +
-                    `• <strong>Attached Charter Dossier:</strong> ${matchedYacht.name} in ${matchedDest.name} (${currentState.culinaryLabel})<br><br>` +
-                    `Our Senior Mediterranean Broker has received your custom configuration and AI storyboard. Is there anything else you'd like to adjust on your dossier before your call?`,
-                    [
-                        { label: '🎬 Watch My AI Charter Video', action: () => generateAIVideoAndScroll() },
-                        { label: '🗺️ Explore Destination Itinerary', action: () => scrollToSection('destinations') }
-                    ]
-                );
-            }
-        }
-
-        function triggerDreamPreset(presetKey) {
-            scrollToSection('dream-studio');
-            if (presetKey === 'amalfi_romance') {
-                processUserDreamInput('Romantic Amalfi Coast & Capri escape for couples with sunset champagne, private grottos, and Michelin coastal dining.');
-            } else if (presetKey === 'riviera_glamour') {
-                processUserDreamInput('Superyacht glamour in Monaco and St. Tropez for 12 guests with Club 55 VIP beach club tender arrivals.');
-            } else if (presetKey === 'greek_odyssey') {
-                processUserDreamInput('Hidden Greek Islands Cyclades voyage with private torchlit beach BBQ and crystal clear coves.');
-            } else if (presetKey === 'family_adventure') {
-                processUserDreamInput('Family adventure in Croatia aboard a stable luxury catamaran with Seabobs, eFoils, and island oyster tastings.');
-            }
-        }
-
-        function askConciergeAbout(promptText) {
-            scrollToSection('dream-studio');
-            processUserDreamInput(promptText);
-        }
-
-        function resetDreamProfile() {
-            currentState.destinationKey = 'amalfi';
-            currentState.matchedYachtId = 'aurelia';
-            currentState.vibeLabel = 'Romantic & Iconic Glamour';
-            currentState.guestsLabel = 'Up to 8 Guests (4 Cabins)';
-            currentState.culinaryKey = 'crudo';
-            currentState.culinaryLabel = 'Michelin Coastal & Crudo';
-            currentState.completionScore = 25;
-            currentState.chatAppointmentStep = null;
-            renderInitialChat();
-            updateDossierUI();
-            renderFleet('all');
-            renderDestinationTabs();
-            renderDestinationSpotlight('amalfi');
-            renderCulinaryGrid();
-            updateVideoStoryboardUI();
-        }
-
-        function updateDossierUI() {
-            const yacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-            const dest = DESTINATIONS[currentState.destinationKey];
-
-            document.getElementById('dossierCompletion').textContent = `${currentState.completionScore}% Tailored`;
-            document.getElementById('profileDestination').textContent = dest.name;
-            document.getElementById('profileVibe').textContent = currentState.vibeLabel;
-            document.getElementById('profileGuests').textContent = currentState.guestsLabel;
-            document.getElementById('profileCulinary').textContent = currentState.culinaryLabel;
-
-            document.getElementById('dossierYachtImg').src = yacht.image;
-            document.getElementById('dossierYachtPrice').textContent = `€${yacht.weeklyRate.toLocaleString()} / wk`;
-            document.getElementById('dossierYachtName').textContent = `${yacht.name} (${yacht.length})`;
-            document.getElementById('dossierYachtSpecs').textContent = `${yacht.cabins.split('(')[0]} • ${yacht.guests} Guests • ${yacht.crew} Crew`;
-            document.getElementById('dossierExperienceTag').textContent = `✨ ${dest.experiences[0].title}`;
-
-            // Also sync dropdowns in AI Cinema section
-            document.getElementById('videoSelectDest').value = currentState.destinationKey;
-            document.getElementById('videoSelectYacht').value = currentState.matchedYachtId;
-            document.getElementById('videoSelectMoment').value = currentState.momentKey;
-
-            // Sync calendar notes
-            const calNotes = document.getElementById('calNotes');
-            if (calNotes) {
-                calNotes.value = `Configured Dossier: ${yacht.name} (${yacht.length}) in ${dest.name} | Vibe: ${currentState.vibeLabel} | Culinary: ${currentState.culinaryLabel}`;
-            }
-        }
-
-        // ============================================================================
-        // 5. AI CHARTER FILM SYNTHESIZER (4-ACT DYNAMIC VIDEO REEL)
-        // ============================================================================
-        function getScenesForCurrentSelection() {
-            const dest = DESTINATIONS[currentState.destinationKey];
-            const yacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-            const culinary = CULINARY_CURATIONS.find(c => c.id === currentState.culinaryKey) || CULINARY_CURATIONS[0];
-
-            return [
-                {
-                    timecode: '09:00 AM — ACT I: MORNING ARRIVAL',
-                    heading: `Cruising ${dest.name} Aboard ${yacht.name}`,
-                    narration: `Your ${yacht.length} ${yacht.builder} glides effortlessly across glass-calm Mediterranean waters as your ${yacht.crew} crew prepares chilled Bellinis and fresh pastries on the sundeck.`,
-                    image: yacht.image
-                },
-                {
-                    timecode: '12:30 PM — ACT II: SECLUDED COVE & WATER TOYS',
-                    heading: `Private Anchorage in ${dest.subtitle.split('•')[0].trim()}`,
-                    narration: `The hydraulic swim platform unfolds at water level. Dive into neon-turquoise water with ${yacht.waterToys[0]} and ${yacht.waterToys[1]}—far away from crowded hotel beaches.`,
-                    image: dest.image
-                },
-                {
-                    timecode: '04:30 PM — ACT III: INSIDER ASHORE IMMERSION',
-                    heading: dest.experiences[0].title,
-                    narration: dest.experiences[0].desc,
-                    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80'
-                },
-                {
-                    timecode: '08:30 PM — ACT IV: STARLIT CHEF\'S TABLE',
-                    heading: culinary.title,
-                    narration: `${culinary.chef} presents ${culinary.sampleMenu[0]} and ${culinary.sampleMenu[2]} by candlelight on your private aft deck under the Mediterranean stars.`,
-                    image: culinary.image
-                }
-            ];
-        }
-
-        function updateVideoStoryboardUI() {
-            const scenes = getScenesForCurrentSelection();
-            const scene = scenes[currentState.activeVideoSceneIndex] || scenes[0];
-            const dest = DESTINATIONS[currentState.destinationKey];
-            const yacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-
-            document.getElementById('videoHudBadge').textContent = `AI Dream Reel • Act ${currentState.activeVideoSceneIndex + 1} of 4 • ${dest.name}`;
-            document.getElementById('videoSceneTimecode').textContent = scene.timecode;
-            document.getElementById('videoSceneHeading').textContent = scene.heading;
-            document.getElementById('videoSceneNarration').textContent = scene.narration;
-            document.getElementById('aiCinemaSceneImage').src = scene.image;
-
-            // Update video source if changed
-            const videoEl = document.getElementById('aiCinemaVideo');
-            const sourceEl = document.getElementById('aiCinemaVideoSource');
-            const targetClip = VIDEO_CLIPS[currentState.destinationKey] || VIDEO_CLIPS.amalfi;
-            if (sourceEl.getAttribute('src') !== targetClip) {
-                sourceEl.setAttribute('src', targetClip);
-                videoEl.load();
-                videoEl.play().catch(() => {});
-            }
-
-            // Update active prompt preview
-            document.getElementById('activePromptPreview').textContent =
-                `"Cinematic 4K aerial & deck reel of ${yacht.name} (${yacht.length}) anchored in ${dest.name}, featuring ${dest.experiences[0].title} and ${currentState.culinaryLabel} at golden hour."`;
-
-            // Update progress bars
-            for (let i = 0; i < 4; i++) {
-                const bar = document.getElementById(`sceneBar${i}`);
-                if (bar) {
-                    bar.style.width = i === currentState.activeVideoSceneIndex ? '100%' : (i < currentState.activeVideoSceneIndex ? '100%' : '0%');
-                    bar.className = i === currentState.activeVideoSceneIndex ? 'h-full bg-gold transition-all' : 'h-full bg-gold/40 transition-all';
-                }
-            }
-        }
-
-        function selectVideoScene(index) {
-            currentState.activeVideoSceneIndex = index;
-            updateVideoStoryboardUI();
-        }
-
-        function startVideoSceneCycle() {
-            if (videoSceneInterval) clearInterval(videoSceneInterval);
-            videoSceneInterval = setInterval(() => {
-                currentState.activeVideoSceneIndex = (currentState.activeVideoSceneIndex + 1) % 4;
-                updateVideoStoryboardUI();
-            }, 6500);
-        }
-
-        function handleManualVideoConfigChange() {
-            currentState.destinationKey = document.getElementById('videoSelectDest').value;
-            currentState.matchedYachtId = document.getElementById('videoSelectYacht').value;
-            currentState.momentKey = document.getElementById('videoSelectMoment').value;
-            updateDossierUI();
-            renderFleet('all');
-            renderDestinationTabs();
-            renderDestinationSpotlight(currentState.destinationKey);
-            regenerateAIVideo();
-        }
-
-        function generateAIVideoAndScroll() {
-            scrollToSection('ai-cinema');
-            regenerateAIVideo();
-        }
-
-        function regenerateAIVideo() {
-            const overlay = document.getElementById('videoSynthesizingOverlay');
-            const stepTitle = document.getElementById('videoRenderStepTitle');
-            const progressBar = document.getElementById('videoRenderProgressBar');
-            const promptText = document.getElementById('videoRenderPromptText');
-
-            const dest = DESTINATIONS[currentState.destinationKey];
-            const yacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-
-            overlay.classList.remove('hidden');
-            promptText.textContent = `Synthesizing "${yacht.name} in ${dest.name}" with ${currentState.culinaryLabel}...`;
-
-            const steps = [
-                { pct: '25%', text: `Act I: Rendering ${yacht.name} Aerial Wake in ${dest.name}...` },
-                { pct: '55%', text: `Act II: Generating Turquoise Cove & ${yacht.waterToys[0]} Sequence...` },
-                { pct: '85%', text: `Act III: Composing ${dest.experiences[0].title}...` },
-                { pct: '100%', text: `Act IV: Mastering Golden-Hour Chef's Table Lighting...` }
-            ];
-
-            let idx = 0;
-            const timer = setInterval(() => {
-                if (idx < steps.length) {
-                    progressBar.style.width = steps[idx].pct;
-                    stepTitle.textContent = steps[idx].text;
-                    idx++;
-                } else {
-                    clearInterval(timer);
-                    overlay.classList.add('hidden');
-                    currentState.activeVideoSceneIndex = 0;
-                    updateVideoStoryboardUI();
-                    startVideoSceneCycle();
-                }
-            }, 450);
-        }
-
-        // ============================================================================
-        // 6. FLEET RENDERING & MODAL INSPECTION
-        // ============================================================================
-        function renderFleet(categoryFilter = 'all') {
-            const grid = document.getElementById('fleetGrid');
-            grid.innerHTML = '';
-
-            // Update filter tab styles
-            ['all', 'superyacht', 'motoryacht', 'catamaran'].forEach(tab => {
-                const btn = document.getElementById(`fleetTab-${tab}`);
-                if (btn) {
-                    if (tab === categoryFilter) {
-                        btn.className = 'px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-ocean text-gold border border-ocean transition-all';
-                    } else {
-                        btn.className = 'px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded bg-white text-ocean border border-gray-300 hover:border-gold transition-all';
-                    }
-                }
-            });
-
-            const filtered = categoryFilter === 'all'
-                ? YACHT_FLEET
-                : YACHT_FLEET.filter(y => y.category === categoryFilter);
-
-            filtered.forEach(yacht => {
-                const isMatched = yacht.id === currentState.matchedYachtId;
-                const card = document.createElement('div');
-                card.className = `bg-white rounded-2xl overflow-hidden border transition-all duration-300 flex flex-col justify-between ${isMatched ? 'matched-glow border-2 border-gold' : 'border-gray-200 shadow-lg hover:shadow-xl'}`;
-
-                card.innerHTML = `
-                    <div>
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="${yacht.image}" alt="${yacht.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/80 via-transparent to-transparent"></div>
-                            ${isMatched ? `<span class="absolute top-4 left-4 bg-gold text-ocean text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded shadow-md">★ Matched to Your Chat Profile</span>` : `<span class="absolute top-4 left-4 bg-ocean/85 text-white text-[11px] uppercase tracking-widest px-3 py-1 rounded">${yacht.categoryLabel}</span>`}
-                            <div class="absolute bottom-4 left-5 right-5 flex justify-between items-end text-white">
-                                <div>
-                                    <span class="text-xs text-gold uppercase tracking-wider block">${yacht.builder}</span>
-                                    <h3 class="font-serif text-2xl">${yacht.name} <span class="text-base font-sans font-light text-gray-300">(${yacht.length})</span></h3>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-[10px] uppercase tracking-widest text-gray-300 block">From</span>
-                                    <span class="font-serif text-xl text-gold font-bold">€${yacht.weeklyRate.toLocaleString()}</span>
-                                    <span class="text-[10px] text-gray-300 block">/ week + APA</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6">
-                            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">${yacht.tagline}</p>
-                            <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 text-center mb-4">
-                                <div>
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-400 block">Guests</span>
-                                    <span class="text-xs font-semibold text-ocean">Up to ${yacht.guests}</span>
-                                </div>
-                                <div class="border-x border-gray-100">
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-400 block">Crew</span>
-                                    <span class="text-xs font-semibold text-ocean">${yacht.crew} Dedicated</span>
-                                </div>
-                                <div>
-                                    <span class="text-[10px] uppercase tracking-wider text-gray-400 block">Speed</span>
-                                    <span class="text-xs font-semibold text-ocean">${yacht.cruisingSpeed}</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 mb-2">
-                                ${yacht.waterToys.slice(0, 4).map(t => `<span class="text-[11px] bg-sand px-2.5 py-1 rounded text-gray-700 border border-gray-200">${t}</span>`).join('')}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="px-6 pb-6 pt-2 flex gap-3">
-                        <button onclick="openYachtModal('${yacht.id}')" class="flex-1 py-3 bg-ocean hover:bg-ocean-light text-white text-xs uppercase tracking-widest font-semibold rounded-lg transition-colors">
-                            Specs & Pricing Breakdown
-                        </button>
-                        <button onclick="selectYachtForDream('${yacht.id}')" class="px-4 py-3 bg-gold/20 hover:bg-gold text-ocean font-semibold text-xs uppercase tracking-wider rounded-lg border border-gold transition-colors">
-                            Select & Preview Film
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function filterFleet(category) {
-            renderFleet(category);
-        }
-
-        function selectYachtForDream(yachtId) {
-            currentState.matchedYachtId = yachtId;
-            updateDossierUI();
-            renderFleet('all');
-            generateAIVideoAndScroll();
-        }
-
-        function openYachtModal(yachtId) {
-            const yacht = YACHT_FLEET.find(y => y.id === yachtId) || YACHT_FLEET[0];
-            const totalEst = yacht.weeklyRate + yacht.apaEstimate;
-            const modal = document.getElementById('yachtDetailModal');
-            const content = document.getElementById('yachtModalContent');
-
-            content.innerHTML = `
-                <div class="relative h-72 sm:h-80">
-                    <img src="${yacht.image}" alt="${yacht.name}" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ocean via-ocean/40 to-transparent"></div>
-                    <button onclick="closeYachtModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-ocean-dark/80 text-white hover:text-gold flex items-center justify-center text-lg">✕</button>
-                    <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between">
-                        <div>
-                            <span class="text-xs uppercase tracking-widest text-gold block mb-1">${yacht.builder} • ${yacht.length}</span>
-                            <h3 class="font-serif text-3xl sm:text-4xl text-white">${yacht.name}</h3>
-                        </div>
-                        <div class="mt-2 sm:mt-0 bg-ocean-dark/90 border border-gold/40 px-4 py-2 rounded-lg">
-                            <span class="text-xs text-gray-300">Weekly Base Rate:</span>
-                            <span class="font-serif text-2xl text-gold font-bold ml-1">€${yacht.weeklyRate.toLocaleString()}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 sm:p-8 space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-ocean-light p-5 rounded-xl border border-white/10">
-                            <h4 class="font-serif text-lg text-gold mb-3">Accommodation & Crew</h4>
-                            <p class="text-xs text-gray-300 mb-2"><strong>Stateroom Layout:</strong> ${yacht.cabins}</p>
-                            <p class="text-xs text-gray-300 mb-2"><strong>Crew Complement:</strong> ${yacht.crew} (Captain, Executive Chef, Chief Stewardess, Deckhands & Engineer)</p>
-                            <p class="text-xs text-gray-300"><strong>Cruising Performance:</strong> ${yacht.cruisingSpeed}</p>
-                        </div>
-                        <div class="bg-ocean-light p-5 rounded-xl border border-gold/30">
-                            <h4 class="font-serif text-lg text-gold mb-3">Transparent Weekly Cost Estimate</h4>
-                            <div class="space-y-1.5 text-xs">
-                                <div class="flex justify-between"><span class="text-gray-300">7-Day Base Yacht & Crew Hire:</span><span class="font-semibold">€${yacht.weeklyRate.toLocaleString()}</span></div>
-                                <div class="flex justify-between"><span class="text-gray-300">Estimated 30% APA (Fuel, Food, Wine, Ports):</span><span class="font-semibold">€${yacht.apaEstimate.toLocaleString()}</span></div>
-                                <div class="flex justify-between pt-2 border-t border-white/10 text-gold font-bold text-sm"><span>Estimated All-In Charter Total:</span><span>€${totalEst.toLocaleString()}</span></div>
-                                <div class="text-[11px] text-gray-400 pt-1">Approx. €${Math.round(totalEst / yacht.guests).toLocaleString()} per guest when split among ${yacht.guests} guests.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="font-serif text-lg text-gold mb-2">Signature Superyacht Features & Water Toys</h4>
-                        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-gray-200 mb-4">
-                            ${yacht.highlights.map(h => `<li class="bg-ocean-dark/70 p-3 rounded border border-white/10">✓ ${h}</li>`).join('')}
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                            ${yacht.waterToys.map(t => `<span class="text-xs bg-gold/15 text-gold border border-gold/30 px-3 py-1 rounded-full">${t}</span>`).join('')}
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row justify-end gap-3 pt-4 border-t border-white/10">
-                        <button onclick="closeYachtModal(); selectYachtForDream('${yacht.id}')" class="px-6 py-3 bg-gold text-ocean font-bold text-xs uppercase tracking-widest rounded-lg">
-                            🎬 Preview ${yacht.name} in AI Charter Film
-                        </button>
-                        <button onclick="closeYachtModal(); startChatAppointmentFlow()" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-widest rounded-lg border border-white/20">
-                            📅 Request Dates for ${yacht.name}
-                        </button>
-                    </div>
-                </div>
-            `;
-            modal.classList.remove('hidden');
-        }
-
-        function closeYachtModal() {
-            document.getElementById('yachtDetailModal').classList.add('hidden');
-        }
-
-        // ============================================================================
-        // 7. DESTINATIONS & LOCAL EXPERIENCES RENDERING
-        // ============================================================================
-        function renderDestinationTabs() {
-            const container = document.getElementById('destinationTabs');
-            container.innerHTML = '';
-            Object.values(DESTINATIONS).forEach(dest => {
-                const isSelected = dest.id === currentState.destinationKey;
-                const btn = document.createElement('button');
-                btn.className = `px-5 py-3 rounded-full text-xs uppercase tracking-widest font-semibold transition-all ${
-                    isSelected
-                        ? 'bg-ocean text-gold shadow-lg border-2 border-gold'
-                        : 'bg-sand text-ocean hover:bg-ocean/10 border border-gray-300'
-                }`;
-                btn.innerHTML = `${dest.name} ${isSelected ? '✦' : ''}`;
-                btn.onclick = () => {
-                    currentState.destinationKey = dest.id;
-                    updateDossierUI();
-                    renderDestinationTabs();
-                    renderDestinationSpotlight(dest.id);
-                    updateVideoStoryboardUI();
-                };
-                container.appendChild(btn);
-            });
-        }
-
-        function renderDestinationSpotlight(destKey) {
-            const dest = DESTINATIONS[destKey] || DESTINATIONS.amalfi;
-            const container = document.getElementById('destinationSpotlight');
-
-            container.innerHTML = `
-                <div class="grid grid-cols-1 lg:grid-cols-12">
-                    <div class="lg:col-span-5 relative min-h-[360px]">
-                        <img src="${dest.image}" alt="${dest.name}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-ocean-dark/90 via-ocean-dark/30 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-white">
-                            <span class="text-xs uppercase tracking-[0.2em] text-gold block mb-1">${dest.country} • ${dest.season}</span>
-                            <h3 class="font-serif text-3xl sm:text-4xl mb-2">${dest.name}</h3>
-                            <p class="text-xs text-gray-200 tracking-wide">${dest.subtitle}</p>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
-                        <div>
-                            <div class="inline-block px-3 py-1 rounded bg-gold/20 text-ocean font-semibold text-xs uppercase tracking-wider mb-3">
-                                Sample 7-Day Route: ${dest.itinerary}
-                            </div>
-                            <p class="text-gray-700 text-sm sm:text-base font-light leading-relaxed mb-6">
-                                ${dest.summary}
-                            </p>
-                            <h4 class="text-xs font-bold uppercase tracking-widest text-ocean mb-4">Curated Ashore & Sea Experiences Included in Your Itinerary:</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                                ${dest.experiences.map(exp => `
-                                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                                        <h5 class="font-serif text-base text-ocean font-semibold mb-1.5">${exp.title}</h5>
-                                        <p class="text-xs text-gray-600 font-light leading-relaxed">${exp.desc}</p>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-200">
-                            <span class="text-xs text-gray-500">Want to customize ports or beach club reservations in ${dest.name}?</span>
-                            <div class="flex gap-3">
-                                <button onclick="generateAIVideoAndScroll()" class="px-5 py-2.5 bg-ocean text-gold text-xs uppercase tracking-widest font-semibold rounded-lg hover:bg-ocean-light transition-all">
-                                    🎬 Watch ${dest.name} AI Video
-                                </button>
-                                <button onclick="askConciergeAbout('Customize a 7-day itinerary in ${dest.name}')" class="px-5 py-2.5 bg-gold text-ocean text-xs uppercase tracking-widest font-semibold rounded-lg hover:bg-gold-light transition-all">
-                                    💬 Tailor in AI Chat
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        // ============================================================================
-        // 8. CULINARY & CHEF CURATION RENDERING
-        // ============================================================================
-        function renderCulinaryGrid() {
-            const grid = document.getElementById('culinaryGrid');
-            grid.innerHTML = '';
-
-            CULINARY_CURATIONS.forEach(item => {
-                const isSelected = item.id === currentState.culinaryKey;
-                const card = document.createElement('div');
-                card.className = `rounded-2xl overflow-hidden bg-ocean-light border transition-all flex flex-col justify-between ${
-                    isSelected ? 'matched-glow border-2 border-gold' : 'border-white/10'
-                }`;
-
-                card.innerHTML = `
-                    <div>
-                        <div class="relative h-52">
-                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-ocean-light via-transparent to-transparent"></div>
-                            <span class="absolute top-3 left-3 bg-ocean-dark/90 text-gold border border-gold/30 text-[10px] uppercase tracking-widest px-2.5 py-1 rounded">
-                                ${isSelected ? '★ Active Onboard Menu Profile' : item.tag}
-                            </span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-gold block mb-1">${item.chef}</span>
-                            <h3 class="font-serif text-xl text-white mb-3">${item.title}</h3>
-                            <p class="text-xs text-gray-300 font-light leading-relaxed mb-4">${item.description}</p>
-                            <div class="bg-ocean-dark/60 p-3.5 rounded-lg border border-white/5">
-                                <span class="text-[10px] uppercase tracking-widest text-gold block mb-2">Sample Tasting Dishes</span>
-                                <ul class="space-y-1 text-xs text-gray-300">
-                                    ${item.sampleMenu.map(dish => `<li>• ${dish}</li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-6">
-                        <button onclick="selectCulinaryProfile('${item.id}', '${item.title}')" class="w-full py-2.5 rounded-lg text-xs uppercase tracking-widest font-semibold transition-all ${
-                            isSelected ? 'bg-gold text-ocean' : 'bg-white/10 hover:bg-gold hover:text-ocean text-white'
-                        }">
-                            ${isSelected ? '✓ Selected for Your Charter' : 'Select This Culinary Direction'}
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function selectCulinaryProfile(id, title) {
-            currentState.culinaryKey = id;
-            currentState.culinaryLabel = title;
-            updateDossierUI();
-            renderCulinaryGrid();
-            updateVideoStoryboardUI();
-        }
-
-        // ============================================================================
-        // 9. INTERACTIVE VISUAL CALENDAR SCHEDULER
-        // ============================================================================
-        const CALENDAR_DATES = [
-            { day: 'Thu', date: 'Nov 12', full: 'Thu, Nov 12' },
-            { day: 'Fri', date: 'Nov 13', full: 'Fri, Nov 13' },
-            { day: 'Mon', date: 'Nov 16', full: 'Mon, Nov 16' },
-            { day: 'Tue', date: 'Nov 17', full: 'Tue, Nov 17' },
-            { day: 'Thu', date: 'Nov 19', full: 'Thu, Nov 19' },
-            { day: 'Fri', date: 'Nov 20', full: 'Fri, Nov 20' },
-            { day: 'Mon', date: 'Nov 23', full: 'Mon, Nov 23' }
-        ];
-
-        const TIME_SLOTS = [
-            '09:30 AM EST',
-            '11:00 AM EST',
-            '02:00 PM EST',
-            '04:30 PM EST'
-        ];
-
-        function renderCalendarWidget() {
-            const daysGrid = document.getElementById('calendarDaysGrid');
-            daysGrid.innerHTML = '';
-
-            CALENDAR_DATES.forEach(d => {
-                const active = d.full === currentState.selectedDate;
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = `p-3 rounded-xl border text-center transition-all ${
-                    active
-                        ? 'bg-ocean text-gold border-2 border-gold shadow-md'
-                        : 'bg-sand hover:bg-gray-100 text-ocean border-gray-200'
-                }`;
-                btn.innerHTML = `
-                    <span class="block text-[10px] uppercase tracking-wider ${active ? 'text-gold' : 'text-gray-500'}">${d.day}</span>
-                    <span class="font-serif text-base font-bold">${d.date}</span>
-                `;
-                btn.onclick = () => {
-                    currentState.selectedDate = d.full;
-                    renderCalendarWidget();
-                };
-                daysGrid.appendChild(btn);
-            });
-
-            const slotsGrid = document.getElementById('calendarTimeSlots');
-            slotsGrid.innerHTML = '';
-            TIME_SLOTS.forEach(slot => {
-                const active = slot === currentState.selectedTime;
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = `py-2.5 px-3 rounded-lg border text-xs font-semibold transition-all ${
-                    active
-                        ? 'bg-gold text-ocean border-gold shadow'
-                        : 'bg-white hover:border-ocean text-ocean border-gray-300'
-                }`;
-                btn.textContent = slot;
-                btn.onclick = () => {
-                    currentState.selectedTime = slot;
-                    renderCalendarWidget();
-                };
-                slotsGrid.appendChild(btn);
-            });
-        }
-
-        function submitCalendarBooking(e) {
-            e.preventDefault();
-            const name = document.getElementById('calName').value;
-            const email = document.getElementById('calEmail').value;
-            const format = document.getElementById('calFormat').value;
-            const yacht = YACHT_FLEET.find(y => y.id === currentState.matchedYachtId);
-            const dest = DESTINATIONS[currentState.destinationKey];
-
-            const box = document.getElementById('calendarConfirmationBox');
-            box.classList.remove('hidden');
-            box.innerHTML = `
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 rounded-full bg-gold text-ocean flex items-center justify-center font-bold shrink-0">✓</div>
-                    <div>
-                        <span class="text-xs uppercase tracking-widest text-gold block">Private Broker Appointment Confirmed</span>
-                        <h4 class="font-serif text-xl text-white mt-0.5">${currentState.selectedDate} at ${currentState.selectedTime}</h4>
-                        <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                            Thank you, <strong>${escapeHtml(name)}</strong>. A calendar invitation for your <strong>${escapeHtml(format)}</strong> and your custom lookbook for <strong>${yacht.name} in ${dest.name}</strong> have been dispatched to <strong>${escapeHtml(email)}</strong>.
-                        </p>
-                    </div>
-                </div>
-            `;
-        }
-
-        // ============================================================================
-        // 10. OPTIONAL LIVE GEMINI API KEY MODAL & INTEGRATION
-        // ============================================================================
-        function openApiModal() {
-            document.getElementById('apiModal').classList.remove('hidden');
-        }
-        function closeApiModal() {
-            document.getElementById('apiModal').classList.add('hidden');
-        }
-        function saveApiKey() {
-            const key = document.getElementById('geminiApiKeyInput').value.trim();
-            currentState.geminiApiKey = key;
-            if (key) {
-                localStorage.setItem('httm_gemini_key', key);
-                document.getElementById('aiModeBadge').textContent = 'Gemini Live AI';
-            } else {
-                localStorage.removeItem('httm_gemini_key');
-                document.getElementById('aiModeBadge').textContent = 'Smart Concierge';
-            }
-            closeApiModal();
-        }
-
-        async function fetchLiveGeminiResponse(userMessage, matchedYacht, matchedDest) {
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(currentState.geminiApiKey)}`;
-            const sysPrompt = `You are Aria, Senior Mediterranean Yacht Charter Concierge for "Head to the Med". Keep responses concise (3-4 sentences max), evocative, persuasive, and luxurious. Convince the visitor why a private yacht charter in the Mediterranean beats any luxury hotel. Currently matched yacht on their screen: ${matchedYacht.name} (${matchedYacht.length}, €${matchedYacht.weeklyRate}/wk) in ${matchedDest.name} with ${currentState.culinaryLabel}. Mention that you've updated the page and AI Charter Film below to match their desires.`;
-            const resp = await fetch(endpoint, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: `${sysPrompt}\n\nVisitor says: ${userMessage}` }] }]
-                })
-            });
-            if (!resp.ok) return null;
-            const data = await resp.json();
-            return data?.candidates?.[0]?.content?.parts?.[0]?.text || null;
-        }
-
-        function escapeHtml(str) {
-            return String(str).replace(/[&<>"']/g, m => ({
-                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-            }[m]));
-        }
-    </script>
 </body>
 </html>
